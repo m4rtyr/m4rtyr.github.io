@@ -1,10 +1,18 @@
+# @Author: S. Sharma <silentcat>
+# @Date:   2019-12-18T09:56:45-06:00
+# @Email:  silentcat@protonmail.com
+# @Last modified by:   silentcat
+# @Last modified time: 2019-12-18T10:17:33-06:00
+
+
+
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       S. Sharma
+email:       akemiaki938@gmail.com
+author:      S. Sharma
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "https://m4rtyr.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
@@ -25,7 +33,7 @@ show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    false
 ajaxify_contact_form: false
-enable_mathjax: false
+enable_mathjax: true
 extended_fonts: false
 enable_anchorjs: false
 # Preview image for social media aka og:image and twitter:image
