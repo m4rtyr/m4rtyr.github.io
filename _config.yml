@@ -2,7 +2,7 @@
 # @Date:   2019-12-18T09:56:45-06:00
 # @Email:  silentcat@protonmail.com
 # @Last modified by:   silentcat
-# @Last modified time: 2019-12-18T10:17:33-06:00
+# @Last modified time: 2019-12-18T10:27:37-06:00
 
 
 
@@ -10,7 +10,7 @@
 title:       S. Sharma
 email:       akemiaki938@gmail.com
 author:      S. Sharma
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+description: "Computer Science, Mathematics, and general banter."
 baseurl:     ""
 url:         "https://m4rtyr.github.io"
 date_format: "%b %-d, %Y"
