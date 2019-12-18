@@ -1,3 +1,11 @@
+// @Author: S. Sharma <silentcat>
+// @Date:   2019-12-18T09:56:45-06:00
+// @Email:  silentcat@protonmail.com
+// @Last modified by:   silentcat
+// @Last modified time: 2019-12-18T10:40:11-06:00
+
+
+
 .site {
   display: -webkit-box;
   display: -webkit-flex;
@@ -26,4 +34,8 @@ footer {
   font-weight: $footer-font-weight;
   padding: $footer-padding;
   text-align: center;
+}
+
+#creator {
+  font-size: 5px;
 }
