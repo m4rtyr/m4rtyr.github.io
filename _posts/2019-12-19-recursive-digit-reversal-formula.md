@@ -2,7 +2,7 @@
 layout: post
 title: Recursive Digit Reversal Formula
 date: 2019-12-19 15:23:45
-summary: A mathematical formula for reversing digits
+summary: A mathematical formula for reversing digits.
 categories: math computer-science
 ---
 
@@ -49,7 +49,9 @@ $$10B + A$$ and get the formula to obtain $$BA$$:
 $$\begin{align}
 10B + A & = 10\biggr(p\mod{10}\biggr) + A \\
 & = 10\Biggr(p\mod{10}\Biggr) + \frac{p - \bigg(p\mod{10}\bigg)}{10} \\
+\\
 & = \frac{100\Biggr(p\mod{10}\Biggr)}{10} + \frac{p - \bigg(p\mod{10}\bigg)}{10} \\
+\\
 & = \frac{p + 99\biggl(p\mod{10}\biggl)}{10}
 \end{align}$$
 
@@ -84,6 +86,7 @@ Then, subtract $$BC$$ from $$ABC$$ to get $$A00$$. Isolate $$A$$ by dividing by 
 
 $$\begin{align}
 ABC - BC & = A00 = p - \biggl(p\mod{100}\biggl) \\
+\\
 A = A00 \div 100 & = \frac{p - \biggl(p\mod{100}\biggl)}{100}
 \end{align}$$
 
