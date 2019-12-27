@@ -35,7 +35,9 @@ From the above, we get the following formula:
 
 $$\begin{align}
   a^2 + b^2 & = (b + 1)^2 \\
+  \\
   a^2 & = b^2 + 2b + 1 - b^2 \\
+  \\
   a^2 & = 2b + 1
 \end{align}$$
 
@@ -44,11 +46,17 @@ where $$n$$ is any arbitrary positive integer (I do this to make the formula mor
 
 $$\begin{align}
 \sqrt{2b+1} + b + b + 1 & = n \\
+\\
 \sqrt{2b+1} + 2b + 1 & = n \\
+\\
 \sqrt{2b + 1} & = n-2b-1 \\
+\\
 2b + 1 & = \bigg(n - (2b + 1)\bigg)^2 \\
+\\
 a^2 & = \bigg(n - a^2\bigg)^2 \\
+\\
 n - a^2 & = a \\
+\\
 a^2 + a & = n \\
 \biggl(a + \frac{1}{2}\biggl)^2 & = n + \frac{1}{4} \\
 a & = \sqrt{n + \frac{1}{4}} - \frac{1}{2}
@@ -59,8 +67,10 @@ if we plug in $$1000$$ in for $$n$$, then we get:
 
 $$\begin{align}
 & \sqrt{1000 + \frac{1}{4}} - \frac{1}{2} \\
-& \sqrt{\frac{4001}{4}} - \frac{1}{2} \\
-& \frac{\sqrt{4001} - 1}{2} \\
+\\
+& = \sqrt{\frac{4001}{4}} - \frac{1}{2} \\
+\\
+& = \frac{\sqrt{4001} - 1}{2} \\
 \end{align}$$
 
 The $$\sqrt{4001}$$ is not a perfect square, meaning that $$a$$ is not an integer.
@@ -75,14 +85,23 @@ Thus, we go through the same process, except this time $$c = b + s$$. Additional
 
 $$\begin{align}
 \sqrt{2bs + s^2} + b + b + s & = n \\
+\\
 \sqrt{2bs + s^2} + 2b + s & = n \\
+\\
 \sqrt{2bs + s^2} & = n - 2b - s \\
+\\
 2bs + s^2 & = \biggl(n - (2b + s)\biggl)^2 \\
+\\
 a^2 & = \biggl(n - \frac{a^2}{s}\biggl)^2 \\
+\\
 n - \frac{a^2}{s} & = a \\
+\\
 \frac{a^2}{s} + a & = n \\
+\\
 a^2 + sa & = ns \\
+\\
 \biggl(a + \frac{s}{2}\biggl)^2 & = ns + \frac{s^2}{4} \\
+\\
 a & = \sqrt{ns + \frac{s^2}{4}} - \frac{s}{2} \\
 \end{align}$$
 
