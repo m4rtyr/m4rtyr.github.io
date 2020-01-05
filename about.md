@@ -17,3 +17,9 @@ Some books I would recommend reading:
 <div align="right">
 —  Karl Popper
 </div>
+
+> A  mathematician,  like  a  painter  or  poet,  is  a  maker of patterns.  If his patterns are more permanent than theirs, it is because they are mad with ideas.
+
+<div align="right">
+—  G.H Hardy
+</div>
