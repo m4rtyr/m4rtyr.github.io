@@ -101,18 +101,19 @@ The above is quite interesting but also clearly very long. We've established mul
 
 
 
-[1] https://www.britannica.com/science/Peano-axioms
+[1] [Britannica — Peano Axioms](https://www.britannica.com/science/Peano-axioms)
 
-[2] https://www2.hawaii.edu/~robertop/Courses/TMP/7_Peano_Axioms.pdf
+[2] [Mathematical Explanation of Peano Axioms](https://www2.hawaii.edu/~robertop/Courses/TMP/7_Peano_Axioms.pdf)
 
-[3] https://plato.stanford.edu/entries/russell-paradox/
+[3] [Russell's Paradox](https://plato.stanford.edu/entries/russell-paradox/)
 
-[4] https://www.youtube.com/watch?v=cZkGeR9CWbk
+[4] [Dismal Arithmetic (Simple Introduction)]( https://www.youtube.com/watch?v=cZkGeR9CWbk)
 
-[5] https://cs.uwaterloo.ca/journals/JIS/VOL14/Sloane/carry2.pdf
+[5] [Dismal Arithmetic (Original Paper)]( https://cs.uwaterloo.ca/journals/JIS/VOL14/Sloane/carry2.pdf)
 
-[6] https://brilliant.org/wiki/peano-axioms/
+[6] [Brilliant — Peano Axioms](https://brilliant.org/wiki/peano-axioms/) 
 
-[7] https://plato.stanford.edu/entries/goedel-incompleteness/
+[7] [Gödel's Incompleteness Theorem](https://plato.stanford.edu/entries/goedel-incompleteness/)
 
-[8] https://www.math.ksu.edu/~cochrane/m511/m511axioms.pdf
+[8] [Axioms for Integers](https://www.math.ksu.edu/~cochrane/m511/m511axioms.pdf)
+
