@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An Example of Induction and Direct Method of Proof
-date: 2020-05-16 21:16:00
+date: 2020-05-21 21:16:00
 summary: An example of induction and direct method of proof of $8^n - 3^n \equiv 0 \pmod 5$
 categories: mathematics
 ---
