@@ -2,7 +2,7 @@
 layout: post
 title: "C Algorithms and Data Structures Library: Part 2"
 date: 2020-06-14 21:28
-summary: Part II: Future Development
+summary: "Part II: Future Development"
 categories: computer-science programming
 ---
 
