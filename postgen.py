@@ -1,5 +1,8 @@
 #!/usr/bin/env python3.7
 
+# The following generates a post given the name for the post
+# as its argument.
+
 import sys
 import datetime
 
