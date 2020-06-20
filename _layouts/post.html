@@ -5,7 +5,9 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css"></link>
     {% include head.html %}
-    {% include math.html %}
+    {% if page.use_math == true %}
+      {% include math.html %}
+    {% endif %}
     <script async src="https://cse.google.com/cse.js?cx=017009826377381835321:ow3rucfv01y"></script>
   </head>
   <body>
