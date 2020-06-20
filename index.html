@@ -6,8 +6,7 @@ title: Home
 <h1 class="baseh1">Blog</h1>
 <ul class="indexul">
   {% for post in site.posts %}
-    <a class="indexcontainera" href="{{ post.url }}">
-      <div class="vl">
+      <div class="vl" onclick="window.open('{{ post.url }}', '_self');">
         <li>
           <h2 class="indexh2">{{ post.title }}</h2>
           <span class="indexspan"><em>Published {{ post.date | date_to_string }}</em></span>
@@ -16,9 +15,17 @@ title: Home
           {% for tag in post.tags %}
             <span class="tags"><em>{{ tag }}</em></span>
           {% endfor %}
-          <span class="indexdiv">{{ post.excerpt }}</span>
+          <div class="indexdiv">{{ post.excerpt }}</div>
         </li>
       </div>
-    </a>
   {% endfor %}
 </ul>
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].hasAttribute('class'))
+        links[i].setAttribute('class', 'posta');
+    }
+  });
+</script>

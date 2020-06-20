@@ -10,15 +10,14 @@
   margin-bottom: 0px;
 }
 
-.indexcontainera {
-  font-family: alegreya;
-  text-decoration: none;
-}
-
 .vl {
   padding-left: 20px;
   border-left: 6px solid gray;
   overflow: none;
+}
+
+.vl:hover {
+  cursor: pointer;
 }
 
 .indexdiv {
