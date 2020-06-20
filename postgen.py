@@ -9,7 +9,7 @@ category = 'category: '
 tags = 'tags: '
 
 now = datetime.datetime.now()
-filename = now.strftime('%Y-%m-%d') + '-' + sys.argv[1].replace(' ', '-') + '.md'
+filename = now.strftime('%Y-%m-%d') + '-' + sys.argv[1].replace(' ', '-').lower() + '.md'
 with open('_posts/' + filename, 'a') as f:
     f.write('---\n')
     f.write(layout + '\n')
@@ -18,3 +18,4 @@ with open('_posts/' + filename, 'a') as f:
     f.write(tags + '\n')
     f.write('excerpt_separator: <!--eof-->\n---\n')
     f.write('\n\n<!--eof-->')
+print('Wrote to ' + filename)
