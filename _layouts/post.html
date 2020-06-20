@@ -5,6 +5,10 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css"></link>
     {% include head.html %}
+    {% if page.use_math == true %}
+      {% include math.html %}
+    {% endif %}
+    <script async src="https://cse.google.com/cse.js?cx=017009826377381835321:ow3rucfv01y"></script>
   </head>
   <body>
     {% include navigation.html %}
@@ -16,13 +20,5 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">
-    window.addEventListener('load', function() {
-      var links = document.getElementsByTagName('a');
-      for (var i = 0; i < links.length; i++) {
-        if (!links[i].hasAttribute('class'))
-          links[i].setAttribute('class', 'posta');
-      }
-    });
-  </script>
+  <script type="text/javascript" src="/assets/js/post.js"></script>
 <html>
