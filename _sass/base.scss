@@ -1,0 +1,37 @@
+@font-face {
+  font-family: alegreya;
+  src: url(fonts/Alegreya-Regular.ttf);
+}
+
+@font-face {
+  font-family: alegreyamed;
+  src: url(fonts/Alegreya-Medium.ttf);
+}
+
+.baseh1 {
+  font-size: 40px;
+  font-family: Georgia;
+  color: #756060;
+}
+
+nav {
+  text-align: center;
+}
+
+.basep {
+  font-family: alegreya;
+  font-size: 20px;
+  text-align: center;
+}
+
+.basea {
+  font-size: 20px;
+  font-family: alegreyamed;
+  color: #7E7676;
+  text-decoration: none;
+  padding-right: 15px;
+}
+
+.basea:hover {
+  text-decoration: underline;
+}
