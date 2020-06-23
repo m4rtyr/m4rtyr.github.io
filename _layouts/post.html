@@ -2,6 +2,8 @@
 <html>
   <head>
     {% include head.html %}
+    <meta name="description", content="{{ page.title }}">
+    <meta name="keywords" content="{% for tag in page.tags %} {{ tag }}{% if forloop.last == false %}, {% endif %} {% endfor %}">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css"></link>
     {% if page.use_math == true %}
