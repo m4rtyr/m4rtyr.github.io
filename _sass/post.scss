@@ -16,6 +16,7 @@
   display: block;
 }
 
+
 .postdiv {
   font-size: 20px;
   padding-bottom: 25px;
@@ -25,6 +26,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  height: auto;
+}
+
+p::selection {
+  background-color: #FFFF00;
 }
 
 .postheader {
