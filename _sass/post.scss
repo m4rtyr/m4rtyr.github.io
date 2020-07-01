@@ -12,20 +12,32 @@
   overflow: none;
 }
 
+.post_title_section {
+  display: block;
+}
+
+
 .postdiv {
-  font-weight: 300;
-  font-family: alegreya;
+  font-size: 20px;
   padding-bottom: 25px;
   line-height: 1.5em;
   color: black;
+  font-family: hoefler;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  height: auto;
 }
 
-.postspan {
+p::selection {
+  background-color: #FFFF00;
+}
+
+.postheader {
+  padding-left: 7px;
+  line-height: 1.5em;
   font-size: 15px;
-  font-family: alegreya;
+  font-family: hoefler;
   color: #7E7676;
 }
 

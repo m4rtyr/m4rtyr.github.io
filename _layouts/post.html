@@ -2,18 +2,30 @@
 <html>
   <head>
     {% include head.html %}
+    <meta name="description", content="{{ page.title }}">
+    <meta name="keywords" content="{% for tag in page.tags %} {{ tag }}{% if forloop.last == false %}, {% endif %} {% endfor %}">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css"></link>
     {% if page.use_math == true %}
       {% include math.html %}
     {% endif %}
-    <script async src="https://cse.google.com/cse.js?cx=017009826377381835321:ow3rucfv01y"></script>
+    <script async src="https://cse.google.com/cse.js?cx=017009826377381835321:lwhhkjp1w9g"></script>
   </head>
   <body>
     {% include navigation.html %}
     <div class="mainpostdiv">
-      <h1 class="posth1">{{ page.title }}</h1>
-      <span class="postspan"><em>Published {{ page.date | date_to_string }}</em></span>
+      <div class="post_title_section">
+        <h1 class="posth1">{{ page.title }}</h1>
+        <br>
+        <div class="postheader">
+          <em>Published {{ page.date | date_to_string }}</em>
+          <br>
+          <img width="10" height="10" src="/assets/images/img_432341.svg"></img>
+          {% for tag in page.tags %}
+            <span class="tags"><em>{{ tag }}</em></span>
+          {% endfor %}
+        </div>
+      </div>
       <div class="postdiv">
         {{ content }}
       </div>
