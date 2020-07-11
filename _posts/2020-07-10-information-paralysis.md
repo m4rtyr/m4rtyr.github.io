@@ -9,7 +9,7 @@ excerpt_separator: <!--eof-->
 
 > About 85 per cent of my “thinking” time was spent getting into a  position to think, to make a decision, to learn something I needed to know...
 >
-> — Licklider
+> — JCR Licklider
 
 *Being Mortal* tackles the hard questions we need to ask ourselves when we're on the verge of death. Atul Gawande discusses about the problems with health care for the elderly and the terminally ill, emphasizing the lack of concern for the socio-emotional and quotidian needs of those near the end of their life.
 
