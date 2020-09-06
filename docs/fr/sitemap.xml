@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>sshawarma.github.io/fr/categories/</loc>
+    <loc>https://sshawarma.github.io/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="sshawarma.github.io/categories/"
+                href="https://sshawarma.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="sshawarma.github.io/fr/categories/"
+                href="https://sshawarma.github.io/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>sshawarma.github.io/fr/</loc>
+    <loc>https://sshawarma.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="sshawarma.github.io/"
+                href="https://sshawarma.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="sshawarma.github.io/fr/"
+                href="https://sshawarma.github.io/fr/"
                 />
   </url>
   
   <url>
-    <loc>sshawarma.github.io/fr/series/</loc>
+    <loc>https://sshawarma.github.io/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="sshawarma.github.io/series/"
+                href="https://sshawarma.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="sshawarma.github.io/fr/series/"
+                href="https://sshawarma.github.io/fr/series/"
                 />
   </url>
   
   <url>
-    <loc>sshawarma.github.io/fr/tags/</loc>
+    <loc>https://sshawarma.github.io/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="sshawarma.github.io/tags/"
+                href="https://sshawarma.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="sshawarma.github.io/fr/tags/"
+                href="https://sshawarma.github.io/fr/tags/"
                 />
   </url>
   
