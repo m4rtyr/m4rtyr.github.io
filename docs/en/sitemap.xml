@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sshawarma.github.io/tags/blogging/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/github-pages/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/hugo/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sshawarma.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sshawarma.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sshawarma.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sshawarma.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/09/using-hugo-with-github-pages/</loc>
+    <lastmod>2020-09-05T20:41:21-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sshawarma.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
@@ -22,20 +77,6 @@
   </url>
   
   <url>
-    <loc>https://sshawarma.github.io/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://sshawarma.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://sshawarma.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://sshawarma.github.io/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -46,20 +87,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://sshawarma.github.io/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://sshawarma.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://sshawarma.github.io/tags/"
                 />
   </url>
   

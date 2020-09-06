@@ -1,0 +1,86 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on S. Sharma&#39;s Blog</title>
+        <link>https://sshawarma.github.io/posts/</link>
+        <description>Recent content in Posts on S. Sharma&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sat, 05 Sep 2020 20:41:21 -0500</lastBuildDate>
+        <atom:link href="https://sshawarma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Using Hugo With Github Pages</title>
+            <link>https://sshawarma.github.io/posts/2020/09/using-hugo-with-github-pages/</link>
+            <pubDate>Sat, 05 Sep 2020 20:41:21 -0500</pubDate>
+            
+            <guid>https://sshawarma.github.io/posts/2020/09/using-hugo-with-github-pages/</guid>
+            <description>Hey there!
+I just moved my blog from Jekyll to Hugo and I wanted to give a quick tutorial on how to use Hugo with GitHub pages.
+Installation First, you&amp;rsquo;ll need to install Hugo:
+MacOS: brew install hugo
+Linux: brew install hugo (Here&amp;rsquo;s a link on how to install brew for Linux)
+Windows: choco install hugo -confirm or scoop install hugo
+Note: You may need to install Go.
+Hugo on GitHub Pages Installing Hugo for GitHub Pages is pretty simple.</description>
+            <content type="html"><![CDATA[<p>Hey there!</p>
+<p>I just moved my blog from Jekyll to Hugo and I wanted to give a quick tutorial on how to use Hugo with GitHub pages.</p>
+<h2 id="installation">Installation</h2>
+<p>First, you&rsquo;ll need to install Hugo:</p>
+<p>MacOS: <code>brew install hugo</code></p>
+<p>Linux: <code>brew install hugo</code> (Here&rsquo;s a link on <a href="https://docs.brew.sh/Homebrew-on-Linux">how to install <code>brew</code> for Linux</a>)</p>
+<p>Windows: <code>choco install hugo -confirm</code> or <code>scoop install hugo</code></p>
+<p><em>Note: You may need to install Go.</em></p>
+<h2 id="hugo-on-github-pages">Hugo on GitHub Pages</h2>
+<p>Installing Hugo for GitHub Pages is pretty simple. First, we will create a new directory (I&rsquo;ll refer to this directory as <code>mysite</code>). Then, type the following commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt; hugo new site mysite
+&gt; cd mysite
+</code></pre></div><p>If you type <code>ls</code>, you&rsquo;ll see a bunch of files in this directory. The only one we care about for now is <code>config.toml</code>. Go to <code>config.toml</code> and find the line that says <code>publishDir = public</code> (or add it somewhere if it&rsquo;s not present). Set <code>publishDir</code> to <code>docs</code>. This will be the root directory that GitHub pages will use to deploy our site. Also, find the line with the parameter <code>baseURL</code> and set <code>baseURL = https://&lt;YOUR-USERNAME&gt;.github.io</code> where <code>&lt;YOUR-USERNAME&gt;</code> is your GitHub username.</p>
+<p>Now, type the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt; hugo server -D
+</code></pre></div><p>Go to <a href="https://localhost:1313">https://localhost:1313/</a> and confirm that your site is running properly. Then, go to GitHub and make a new repository called <code>&lt;YOUR-USERNAME&gt;.github.io</code>. Once you do that, go to the <strong>Settings</strong> tab and scroll down to the section that says <strong>GitHub Pages</strong>. Under the <strong>Source</strong> heading, use the dropdown to select the <code>/docs</code> option. This will inform GitHub Pages that the root directory for your site is under the <code>docs</code> subdirectory. Finally, click the <strong>Save</strong> button.</p>
+<p><img src="/github-pages.png" alt="test"></p>
+<p>All we have to do now is push your site to the repository. Type the following commands (you&rsquo;re still in the <code>mysite/</code> folder at this point):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt; cd ../
+&gt; git clone https://&lt;YOUR-USERNAME&gt;.github.io
+&gt; cp -r mysite/ &lt;YOUR-USERNAME&gt;.github.io
+&gt; rm -rf mysite/
+&gt; cd &lt;YOUR-USERNAME&gt;.github.io
+&gt; hugo
+&gt; cd docs
+&gt; git add .
+&gt; git commit -m <span style="color:#e6db74">&#34;My Hugo Site&#34;</span> <span style="color:#75715e"># or whatever you want your commit message to be...</span>
+&gt; git push origin master
+</code></pre></div><p>&hellip;and that&rsquo;s it! The above commands clone your repository, copy the files from <code>mysite/</code> to <code>&lt;YOUR-USERNAME&gt;.github.io/</code>, generate the root directory (<code>docs</code>) using the <code>Hugo</code> command, and then commit and push your site to the <code>master</code> branch.</p>
+<p>Likely, you&rsquo;ll be making a lot of changes to your Hugo site. In that case, you&rsquo;ll want a shell script to streamline the process. The following bash script does that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># If a command fails then the deploy stops</span>
+set -e
+
+printf <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To docs folder</span>
+cd docs
+
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site </span><span style="color:#66d9ef">$(</span>date<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+	msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+</code></pre></div><p>The above was taken from a post by Hugo for deploying your website to GitHub pages, which I <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">recommend reading</a> for more information on how to add posts, customize/create themes, and write your own templates.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
