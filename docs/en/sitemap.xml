@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>sshawarma.github.io/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>sshawarma.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
