@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 Nov 2020 18:10:06 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2020 21:48:11 -0600</lastBuildDate>
     
 	<atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I Stopped Using Lastpass</title>
+      <link>https://sshawarma.github.io/posts/2020/11/why-i-stopped-using-lastpass/</link>
+      <pubDate>Wed, 04 Nov 2020 21:48:11 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2020/11/why-i-stopped-using-lastpass/</guid>
+      <description>For the longest time I used to use Lastpass. It&amp;rsquo;s a pretty good password manager, but over time I started to have some concerns about whether I should keep using it. So, a few months ago, I deleted my Lastpass account and decided to get a local password manager.
+So, why did I do it?
+Lastpass is a great password manager without a doubt. Not only is it free, but you can auto-generate secure, random passwords and with its browser extension you can auto-fill password and username fields to make logging into your accounts faster.</description>
+    </item>
     
     <item>
       <title>Combining Canvas and D3.js Network Charts</title>

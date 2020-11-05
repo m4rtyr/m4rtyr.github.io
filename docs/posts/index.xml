@@ -6,8 +6,26 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 03 Nov 2020 18:10:06 -0600</lastBuildDate>
+        <lastBuildDate>Wed, 04 Nov 2020 21:48:11 -0600</lastBuildDate>
         <atom:link href="https://sshawarma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Why I Stopped Using Lastpass</title>
+            <link>https://sshawarma.github.io/posts/2020/11/why-i-stopped-using-lastpass/</link>
+            <pubDate>Wed, 04 Nov 2020 21:48:11 -0600</pubDate>
+            
+            <guid>https://sshawarma.github.io/posts/2020/11/why-i-stopped-using-lastpass/</guid>
+            <description>For the longest time I used to use Lastpass. It&amp;rsquo;s a pretty good password manager, but over time I started to have some concerns about whether I should keep using it. So, a few months ago, I deleted my Lastpass account and decided to get a local password manager.
+So, why did I do it?
+Lastpass is a great password manager without a doubt. Not only is it free, but you can auto-generate secure, random passwords and with its browser extension you can auto-fill password and username fields to make logging into your accounts faster.</description>
+            <content type="html"><![CDATA[<p>For the longest time I used to use Lastpass. It&rsquo;s a pretty good password manager, but over time I started to have some concerns about whether I should keep using it. So, a few months ago, I deleted my Lastpass account and decided to get a local password manager.</p>
+<p>So, why did I do it?</p>
+<p>Lastpass is a great password manager without a doubt. Not only is it free, but you can auto-generate secure, random passwords and with its browser extension you can auto-fill password and username fields to make logging into your accounts faster. It&rsquo;s great. However, I started to feel insecure about using Lastpass when I realized that using a <em>browser extension</em> to store my passwords is a little insecure. If a website exploited a weakness in my browser, they could potentially gain access to my passwords if I were logged into my Lastpass account. Granted, I thought, this isn&rsquo;t likely to happen since I tend to follow good security practices which means (1) not going to sketchy websites and (2) enabling my firewall when I connect to any network.</p>
+<p>However, a more likely attack vector is at the company itself. You see, Lastpass doesn&rsquo;t store your passwords locally. Instead, all of your account passwords are stored in some database that Lastpass owns in some part of the world unknown to you. Considering that data breaches happen frequently and a company like Lastpass is a desirable target for any bad actor, it&rsquo;s possible that my data could be leaked in a data breach of Lastpass&rsquo;s servers. I know that Lastpass has a good reputation and that they probably follow good security practices, but I feel a little insecure entrusting the integrity of my accounts to a company.</p>
+<p>As a result, I deleted my Lastpass account and found a secure local password manager that would suit my needs. Sure, it may not be as convenient as using the Lastpass browser extension, but I feel better knowing that my passwords are stored, encrypted and hashed, in a local database on my computer rather than in some database waiting to be leaked by a hacker.</p>
+<p>NOTE: When choosing a local password manager, I ignored managers like 1Password and BitWarden because (1) they&rsquo;re paid and (2) they also have some of the same faults that Lastpass has.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Combining Canvas and D3.js Network Charts</title>

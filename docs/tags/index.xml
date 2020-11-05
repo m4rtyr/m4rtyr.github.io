@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 Nov 2020 18:10:06 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2020 21:48:11 -0600</lastBuildDate>
     
 	<atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>personal</title>
+      <link>https://sshawarma.github.io/tags/personal/</link>
+      <pubDate>Wed, 04 Nov 2020 21:48:11 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/personal/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>computer-science</title>
@@ -36,15 +45,6 @@
       <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://sshawarma.github.io/tags/personal/</link>
-      <pubDate>Mon, 02 Nov 2020 16:17:59 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/personal/</guid>
       <description></description>
     </item>
     
