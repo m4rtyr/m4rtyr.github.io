@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 05 Nov 2020 20:36:18 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2020 20:17:22 -0600</lastBuildDate>
     
 	<atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://sshawarma.github.io/tags/algorithm/</link>
+      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer-science</title>
+      <link>https://sshawarma.github.io/tags/computer-science/</link>
+      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamic-programming</title>
+      <link>https://sshawarma.github.io/tags/dynamic-programming/</link>
+      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/dynamic-programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>untagged</title>
@@ -27,15 +54,6 @@
       <pubDate>Wed, 04 Nov 2020 21:48:11 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computer-science</title>
-      <link>https://sshawarma.github.io/tags/computer-science/</link>
-      <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
       <description></description>
     </item>
     
@@ -81,24 +99,6 @@
       <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
       
       <guid>https://sshawarma.github.io/tags/reddit-api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web-scraping</title>
-      <link>https://sshawarma.github.io/tags/web-scraping/</link>
-      <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/web-scraping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blogging</title>
-      <link>https://sshawarma.github.io/tags/blogging/</link>
-      <pubDate>Sat, 05 Sep 2020 20:41:21 -0500</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/blogging/</guid>
       <description></description>
     </item>
     

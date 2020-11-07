@@ -6,8 +6,46 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 05 Nov 2020 20:36:18 -0600</lastBuildDate>
+        <lastBuildDate>Fri, 06 Nov 2020 20:17:22 -0600</lastBuildDate>
         <atom:link href="https://sshawarma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fractional Knapsack</title>
+            <link>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</link>
+            <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
+            
+            <guid>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</guid>
+            <description>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&amp;rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.
+Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</description>
+            <content type="html"><![CDATA[<p>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.</p>
+<h2 id="problem">Problem</h2>
+<p>Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</p>
+<h2 id="solution">Solution</h2>
+<p>In this case, we want to do the following:</p>
+<p>$$\text{minimize} \sum_{k=1}^n p_kx_k$$</p>
+<p>where $x_k$ is the fraction of the item we took. We do this with the constraint that:</p>
+<p>$$\sum_{k=1}^n x_kw_k = W$$</p>
+<p>where $0 \le x_k \le 1$ is the fraction of the item we take.</p>
+<p>Considering that each item is of weight $w_k$ and has price $p_k$, a greedy solution would be to choose the object with minimal price first. In order to choose the object of minimal weight, we can sort the objects by price per unit weight in ascending order. That way, we choose the object of minimum price each time. Thus, we sort according to $\frac{p_k}{w_k}$. Let&rsquo;s use an example. Imagine we have some items with the following weights and price and we can only carry 500 pounds:</p>
+<ul>
+<li>100 pounds, $30 (unit rate: \$0.3)</li>
+<li>20 pounds, $5 (unit rate: \$0.25)</li>
+<li>150 pounds, $25 (unit rate: \$0.17)</li>
+<li>225 pounds, $15 (unit rate: \$0.07)</li>
+<li>10 pounds, $2 (unit rate: \$0.20)</li>
+</ul>
+<p>Sorting the above list in ascending order, we get:</p>
+<ul>
+<li>225 pounds, $15</li>
+<li>150 pounds, $25</li>
+<li>10 pounds, $2</li>
+<li>20 pounds, $5</li>
+<li>100 pounds, $30</li>
+</ul>
+<p>Now, considering that we must &ldquo;fill the knapsack&rdquo; with a weight of $W$, we should continue to take as much weight as possible until we are forced to take a fraction to prevent overfilling the knapsack. So, in the example above, we would take the 225 pounds for \$15 (225 &lt; 500), the 150 pounds for \$25 (225 + 150 = 375 &lt; 500), the 10 pounds for \$2 (225 + 150 + 10 = 385 &lt; 500), and the 20 pounds for \$5 (225 + 150 + 10 + 20 = 405 &lt; 500). However, once we arrive at the 100 pound item, we are forced to take a fraction since if we take the whole 100 pounds the knapsack would fill to 505 pounds which is above the knapsack capacity. Thus, we take 95 pounds (as a fraction, that is $\frac{95}{100}$ of the item) which would mean that we would only pay $\$0.3 \times 95 = \$28.50$. Thus, in total, we would pay $\$15 + \$25 + \$2 + \$5 + \$28.50 = \$75.50$. Thus, with the fractional knapsack algorithm, we would have found the lowest price.</p>
+<p>The above algorithm would run in $O(N \log N)$ if we consider that we sort the items by their price per unit and then check what fraction of the item must be added.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Trying Server Side Charts</title>

@@ -3,13 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sshawarma.github.io/tags/algorithm/</loc>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/dynamic-programming/</loc>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</loc>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sshawarma.github.io/posts/</loc>
-    <lastmod>2020-11-05T20:36:18-06:00</lastmod>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/</loc>
-    <lastmod>2020-11-05T20:36:18-06:00</lastmod>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -24,7 +44,7 @@
   
   <url>
     <loc>https://sshawarma.github.io/tags/</loc>
-    <lastmod>2020-11-05T20:36:18-06:00</lastmod>
+    <lastmod>2020-11-06T20:17:22-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -59,11 +79,6 @@
   
   <url>
     <loc>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</loc>
-    <lastmod>2020-11-03T18:10:06-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
     <lastmod>2020-11-03T18:10:06-06:00</lastmod>
   </url>
   
