@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 05 Nov 2020 20:36:18 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2020 21:47:51 -0600</lastBuildDate>
     
 	<atom:link href="https://sshawarma.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wikipedia Graph Update</title>
+      <link>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</link>
+      <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</guid>
+      <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
+    </item>
     
     <item>
       <title>Trying Server Side Charts</title>
