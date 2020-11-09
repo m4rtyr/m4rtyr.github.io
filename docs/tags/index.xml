@@ -13,11 +13,20 @@
     
     
     <item>
-      <title>untagged</title>
-      <link>https://sshawarma.github.io/tags/untagged/</link>
+      <title>computer-science</title>
+      <link>https://sshawarma.github.io/tags/computer-science/</link>
       <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/tags/untagged/</guid>
+      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>d3.js</title>
+      <link>https://sshawarma.github.io/tags/d3.js/</link>
+      <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/d3.js/</guid>
       <description></description>
     </item>
     
@@ -40,15 +49,6 @@
     </item>
     
     <item>
-      <title>computer-science</title>
-      <link>https://sshawarma.github.io/tags/computer-science/</link>
-      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dynamic-programming</title>
       <link>https://sshawarma.github.io/tags/dynamic-programming/</link>
       <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
@@ -58,20 +58,20 @@
     </item>
     
     <item>
+      <title>untagged</title>
+      <link>https://sshawarma.github.io/tags/untagged/</link>
+      <pubDate>Thu, 05 Nov 2020 20:36:18 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/untagged/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>personal</title>
       <link>https://sshawarma.github.io/tags/personal/</link>
       <pubDate>Wed, 04 Nov 2020 21:48:11 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>d3.js</title>
-      <link>https://sshawarma.github.io/tags/d3.js/</link>
-      <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/d3.js/</guid>
       <description></description>
     </item>
     
