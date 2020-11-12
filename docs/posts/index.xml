@@ -6,8 +6,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 09 Nov 2020 22:06:05 -0600</lastBuildDate>
+        <lastBuildDate>Wed, 11 Nov 2020 20:47:48 -0600</lastBuildDate>
         <atom:link href="https://sshawarma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Learning Rust</title>
+            <link>https://sshawarma.github.io/posts/2020/11/learning-rust/</link>
+            <pubDate>Wed, 11 Nov 2020 20:47:48 -0600</pubDate>
+            
+            <guid>https://sshawarma.github.io/posts/2020/11/learning-rust/</guid>
+            <description>Hey there.
+I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
+            <content type="html"><![CDATA[<p>Hey there.</p>
+<p>I didn&rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the <a href="https://doc.rust-lang.org/stable/book/">Official Rust Book</a> since I used to play around with the C programming language. So far, I&rsquo;ve found Rust to be an interesting language that remedies some of the problems with &ldquo;unsafe&rdquo; languages like C while still attempting to give access to the low level.</p>
+<p>Like C, Rust has <code>struct</code>s and <code>enum</code>s and it allows unsafe memory access through its &ldquo;unsafe&rdquo; mode. What I found quite interesting, however, was Rust&rsquo;s memory management system. Essentially, Rust remedies the issues of dangling references and data races through its concept of ownership. Essentially, every value in Rust has only <strong>one</strong> owner at a time. For example, in the code below:</p>
+<p><code>let x = 23;</code></p>
+<p><code>x</code> is the owner of the value <code>23</code>. With primitive types like integers (which Rust determines through type inference) ownership isn&rsquo;t a huge problem since primitives are easily able to be copied from one value to another, but with heap-allocated data types (like <code>String</code>), the concept of ownership comes into play. Let&rsquo;s say I have the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;Hello&#34;</span>);
+  <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s;
+  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+}
+</code></pre></div><p>Rust throws the following compilation error:</p>
+<pre><code>error[E0382]: borrow of moved value: `s`
+ --&gt; test.rs:4:18
+  |
+2 |   let s = String::from(&quot;Hello&quot;);
+  |       - move occurs because `s` has type `std::string::String`, which does not implement the `Copy` trait
+3 |   let s2 = s;
+  |            - value moved here
+4 |   println!(&quot;{}&quot;, s);
+  |                  ^ value borrowed here after move
+
+error: aborting due to previous error; 1 warning emitted
+
+For more information about this error, try `rustc --explain E0382`.
+</code></pre><p>Basically, this error is saying that <code>s</code> was not copied to <code>s2</code> (it doesn&rsquo;t implement the <code>Copy</code> trait — or interface — so Rust doesn&rsquo;t try to copy it), meaning instead it was <em>moved</em>. Initially, <code>s</code> pointed to &ldquo;Hello&rdquo;, but after <code>s2</code> is assigned to <code>s</code>, it takes ownership of the value and the variable <code>s</code> will be invalidated. Thus, when we try to call the <code>println!</code> macro, the Rust compiler detects that the variable has been invalidated and avoids compiling. This avoids the issue of pointer aliasing and dangling references, which are all-too-common in C programs.</p>
+<p>There&rsquo;s more I could talk about, but that&rsquo;s why there is an entire book on the subject. Hopefully, I&rsquo;ll write some Rust code in the future worth sharing. :)</p>
+]]></content>
+        </item>
         
         <item>
             <title>Watson Time Tracker</title>

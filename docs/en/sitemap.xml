@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/11/learning-rust/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sshawarma.github.io/posts/</loc>
-    <lastmod>2020-11-09T22:06:05-06:00</lastmod>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/rust/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/</loc>
-    <lastmod>2020-11-09T22:06:05-06:00</lastmod>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -24,7 +39,7 @@
   
   <url>
     <loc>https://sshawarma.github.io/tags/</loc>
-    <lastmod>2020-11-09T22:06:05-06:00</lastmod>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -45,11 +60,6 @@
   <url>
     <loc>https://sshawarma.github.io/posts/2020/11/watson-time-tracker/</loc>
     <lastmod>2020-11-09T22:06:05-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
-    <lastmod>2020-11-08T21:47:51-06:00</lastmod>
   </url>
   
   <url>
