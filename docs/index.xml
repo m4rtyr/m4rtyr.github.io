@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 11 Nov 2020 20:47:48 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2020 22:06:43 -0600</lastBuildDate>
     
 	<atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unfinished Projects</title>
+      <link>https://sshawarma.github.io/posts/2020/11/unfinished-projects/</link>
+      <pubDate>Sat, 14 Nov 2020 22:06:43 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2020/11/unfinished-projects/</guid>
+      <description>Hey there.
+I dropped writing for a little bit just to give myself a break and give myself some time to work on my project. Speaking of projects, this year I&amp;rsquo;ve been trying to cultivate more persistence. I feel like in the past I would start a project, go somewhat far with it, and then fail to follow through and provide something that worked the way I wanted.
+More critically, I didn&amp;rsquo;t feel satisfied.</description>
+    </item>
     
     <item>
       <title>Learning Rust</title>
@@ -103,17 +114,6 @@ The Problem Basically, when I tried to render the network chart I decided to go 
       <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve written anything but I&amp;rsquo;ve decided as of today to start writing everyday for the sake of documenting the work I do and for keeping myself accountable.
 That&amp;rsquo;s it.
 :)</description>
-    </item>
-    
-    <item>
-      <title>Plotting Reddit Comment Trends With Pandas</title>
-      <link>https://sshawarma.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</link>
-      <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
-      
-      <guid>https://sshawarma.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</guid>
-      <description>Hey there!
-I wanted to learn more about Pandas, a Python library for data analysis, so I decided to embark on a mini-project to experiment with it. If you use Reddit, you&amp;rsquo;ve probably seen a chain of comments like below:
-Clearly, you can see that there&amp;rsquo;s a pattern in the number of upvotes. Every reply to the parent comment receives less upvotes compared to the previous reply. It would be interesting to create a bar graph, comparing the number of upvotes the parent comment received, the number of upvotes the first reply received, the number of upvotes the second reply received, &amp;hellip;, the number of upvotes the nth reply received.</description>
     </item>
     
   </channel>

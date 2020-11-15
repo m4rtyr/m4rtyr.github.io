@@ -3,28 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/posts/2020/11/learning-rust/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+    <loc>https://sshawarma.github.io/tags/personal/</loc>
+    <lastmod>2020-11-14T22:06:43-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/posts/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/rust/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+    <lastmod>2020-11-14T22:06:43-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+    <lastmod>2020-11-14T22:06:43-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -39,7 +29,7 @@
   
   <url>
     <loc>https://sshawarma.github.io/tags/</loc>
-    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+    <lastmod>2020-11-14T22:06:43-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -50,6 +40,26 @@
                 hreflang="en"
                 href="https://sshawarma.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/11/unfinished-projects/</loc>
+    <lastmod>2020-11-14T22:06:43-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/11/learning-rust/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/rust/</loc>
+    <lastmod>2020-11-11T20:47:48-06:00</lastmod>
   </url>
   
   <url>
@@ -100,11 +110,6 @@
   <url>
     <loc>https://sshawarma.github.io/posts/2020/11/trying-server-side-charts/</loc>
     <lastmod>2020-11-05T20:36:18-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/personal/</loc>
-    <lastmod>2020-11-04T21:48:11-06:00</lastmod>
   </url>
   
   <url>
