@@ -7,10 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 22:06:43 -0600</lastBuildDate>
-    
-	<atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 23 Nov 2020 20:33:28 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting a MAC Address on a Mac</title>
+      <link>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
+      <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
+      <description>Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&amp;rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:</description>
+    </item>
     
     <item>
       <title>Unfinished Projects</title>
@@ -103,17 +110,6 @@ Lastpass is a great password manager without a doubt. Not only is it free, but y
       <guid>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
       <description>I&amp;rsquo;ve been working on creating a network graph to show the relationship between every single Wikipedia article. I wanted to write this article so I can walk through the problem I&amp;rsquo;m having.
 The Problem Basically, when I tried to render the network chart I decided to go the conventional route and use an SVG (Scalable Vector Graphic). SVGs are awesome for rendering different types of shapes and transitions. For a typical person rendering a few nodes on a network graph, SVGs work well (not to mention that pretty much every tutorial/article on using D3.</description>
-    </item>
-    
-    <item>
-      <title>Writing Everyday</title>
-      <link>https://sshawarma.github.io/posts/2020/11/writing-everyday/</link>
-      <pubDate>Mon, 02 Nov 2020 16:17:59 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/posts/2020/11/writing-everyday/</guid>
-      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve written anything but I&amp;rsquo;ve decided as of today to start writing everyday for the sake of documenting the work I do and for keeping myself accountable.
-That&amp;rsquo;s it.
-:)</description>
     </item>
     
   </channel>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="S. Sharma ">
+<meta name="description" content="Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&amp;rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:" />
+<meta name="keywords" content=", computer-science, c, networking" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/" />
+
+
+    <title>
+        
+            Getting a MAC Address on a Mac :: S. Sharma&#39;s Blog 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://sshawarma.github.io/main.393856bf2c430bb6c01d7af07c6fe966e7cce8073435cfbbc46e590bab7405ef.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sshawarma.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sshawarma.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sshawarma.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://sshawarma.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://sshawarma.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://sshawarma.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Getting a MAC Address on a Mac">
+<meta itemprop="description" content="Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:">
+<meta itemprop="datePublished" content="2020-11-23T20:33:28-06:00" />
+<meta itemprop="dateModified" content="2020-11-23T20:33:28-06:00" />
+<meta itemprop="wordCount" content="1568">
+<meta itemprop="image" content="https://sshawarma.github.io"/>
+
+
+
+<meta itemprop="keywords" content="computer-science,c,networking," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sshawarma.github.io"/>
+
+<meta name="twitter:title" content="Getting a MAC Address on a Mac"/>
+<meta name="twitter:description" content="Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:"/>
+
+
+
+    <meta property="og:title" content="Getting a MAC Address on a Mac" />
+<meta property="og:description" content="Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/" />
+<meta property="og:image" content="https://sshawarma.github.io"/>
+<meta property="article:published_time" content="2020-11-23T20:33:28-06:00" />
+<meta property="article:modified_time" content="2020-11-23T20:33:28-06:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-11-23 20:33:28 -0600 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://sshawarma.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ sshawarma</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://sshawarma.github.io/about/">About</a></li><li><a href="https://sshawarma.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        8 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/">Getting a MAC Address on a Mac</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <p>Hey there.</p>
+<p>Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&rsquo;t as straightforward and I had to do some digging to find an answer.</p>
+<p>On Linux, generally I would find the MAC address by doing an <code>ioctl()</code> call with the argument <code>SIOCGIFHWADDR</code> like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">{
+  <span style="color:#75715e">/* --snip-- */</span>
+  <span style="color:#66d9ef">struct</span> ifreq ifr <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span> };
+  strncpy(<span style="color:#f92672">&amp;</span>ifr.ifr_addr, interface_name, <span style="color:#66d9ef">sizeof</span>(ifr.ifr_addr));
+  <span style="color:#66d9ef">if</span> (ioctl(fd, SIOCGIFHWADDR, <span style="color:#f92672">&amp;</span>ifreq) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#75715e">/* Error */</span>
+  }
+  <span style="color:#75715e">// Now the hardware address can be accessed in ifr_hwaddr
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>However, on macOS, the code isn&rsquo;t as compact. I won&rsquo;t keep you waiting, so here&rsquo;s the code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> mib[<span style="color:#ae81ff">6</span>] <span style="color:#f92672">=</span> { CTL_NET, AF_ROUTE, <span style="color:#ae81ff">0</span>, AF_LINK, NET_RT_IFLIST, <span style="color:#ae81ff">0</span> };
+size_t len <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+mib[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> if_nametoindex(interface);
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>mib[<span style="color:#ae81ff">5</span>]) {
+      <span style="color:#75715e">/* Error */</span>
+}
+<span style="color:#66d9ef">if</span> (sysctl(mib, <span style="color:#ae81ff">6</span>, NULL, <span style="color:#f92672">&amp;</span>len, NULL, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+     <span style="color:#75715e">/* Error */</span>
+}
+
+<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>buf <span style="color:#f92672">=</span> calloc(<span style="color:#ae81ff">1</span>, len);
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>buf) {
+    <span style="color:#75715e">/* Error */</span>
+}
+<span style="color:#66d9ef">if</span> (sysctl(mib, <span style="color:#ae81ff">6</span>, buf, <span style="color:#f92672">&amp;</span>len, NULL, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#75715e">/* Error */</span>
+}
+
+<span style="color:#66d9ef">struct</span> if_msghdr <span style="color:#f92672">*</span>ifm <span style="color:#f92672">=</span> (<span style="color:#66d9ef">struct</span> if_msghdr <span style="color:#f92672">*</span>) buf;
+<span style="color:#66d9ef">struct</span> sockaddr_dl <span style="color:#f92672">*</span>sdl <span style="color:#f92672">=</span> (<span style="color:#66d9ef">struct</span> sockaddr_dl <span style="color:#f92672">*</span>)(ifm <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+u_char <span style="color:#f92672">*</span>src <span style="color:#f92672">=</span> (u_char <span style="color:#f92672">*</span>) LLADDR(sdl);
+</code></pre></div><p>&hellip;</p>
+<p>As someone who has written stuff for Linux machines, this wasn&rsquo;t super out there. But I needed to look at each line step by step to understand it. Before I do that though, I want to talk a little bit about <code>sysctl()</code>. As the man page for it says:</p>
+<blockquote>
+<p>The sysctl() function retrieves system information and allows processes with appropriate privileges to set system information.  The information available from sysctl() consists of integers, strings, and tables.  Information may be retrieved and set from the command interface using the sysctl(8) utility.</p>
+</blockquote>
+<p>So as far as I understand, it&rsquo;s basically like <code>ioctl()</code>, which is weird since you can also call <code>ioctl()</code> on macOS as well. <code>sysctl()</code> operates on multiple &ldquo;levels&rdquo;. These levels describe the operation you&rsquo;re trying to execute (in code, you use an array — in this case, we use the array <code>mib</code> — to represent the different levels we are accessing). At the top level is the &ldquo;type&rdquo; of operation you&rsquo;re trying to execute:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Next level names</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTL_DEBUG</td>
+<td>sys/sysctl.h</td>
+<td>Debugging</td>
+</tr>
+<tr>
+<td>CTL_VFS</td>
+<td>sys/mount.h</td>
+<td>File system</td>
+</tr>
+<tr>
+<td>CTL_HW</td>
+<td>sys/sysctl.h</td>
+<td>Generic CPU, I/O</td>
+</tr>
+<tr>
+<td>CTL_KERN</td>
+<td>sys/sysctl.h</td>
+<td>High kernel limits</td>
+</tr>
+<tr>
+<td>CTL_MACHDEP</td>
+<td>sys/sysctl.h</td>
+<td>Machine dependent</td>
+</tr>
+<tr>
+<td>CTL_NET</td>
+<td>sys/socket.h</td>
+<td>Networking</td>
+</tr>
+<tr>
+<td>CTL_USER</td>
+<td>sys/sysctl.h</td>
+<td>User-level</td>
+</tr>
+<tr>
+<td>CTL_VM</td>
+<td>sys/resources.h</td>
+<td>Virtual memory (struct loadavg)</td>
+</tr>
+</tbody>
+</table>
+<p>Since we&rsquo;re looking for the hardware address, let&rsquo;s look under the <code>CTL_NET</code> level. The second level appears to detail the  particular network layer we&rsquo;re interested in. There&rsquo;s three layers: <code>PF_ROUTE</code>, <code>PF_INET</code>, and <code>PF_INET6</code>. <code>PF_INET*</code> deals with the internet layer (so IP addresses) while <code>PF_ROUTE</code> deals with the routing table.  Referring to the manual:</p>
+<blockquote>
+<p>[PF_ROUTE — ] Return the entire routing table or a subset of it.  The data is returned as a sequence of routing messages (see route(4) for the header file, format and meaning).  The length of each message is contained in the message header. The third level name is a protocol number, which is currently always 0.  The fourth level name is an address family, which may be set to 0 to select all address families.  The fifth, sixth, and seventh level names are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Fifth level</th>
+<th>Sixth level</th>
+<th>Seventh Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NET_RT_FLAGS</td>
+<td>rtflags</td>
+<td>None</td>
+</tr>
+<tr>
+<td>NET_RT_DUMP</td>
+<td>None</td>
+<td>None or fib number</td>
+</tr>
+<tr>
+<td>NET_RT_IFLIST</td>
+<td>0 or if_index</td>
+<td>None</td>
+</tr>
+<tr>
+<td>NET_RT_IFMALIST</td>
+<td>0 or if_index</td>
+<td>None</td>
+</tr>
+<tr>
+<td>NET_RT_IFLIST</td>
+<td>0 or if_index</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>OK, so the third level is always zero, so we don&rsquo;t need to worry about that&hellip;the fourth level is an address family. Considering we&rsquo;re interested in a hardware address, we&rsquo;re interested in the <em>link layer</em>, so we should probably consider using <code>AF_LINK</code>. The fifth level is <strong>really</strong> what we&rsquo;re interested in. <code>NET_RT_IFLIST</code> is the key here: it returns information about interfaces (<code>NET_RT_IFMALIST</code> is for multicast addresses and frankly I don&rsquo;t even know what <code>NET_RT_IFLISTL</code> is for). The sixth level allows us to narrow our target. By default, <code>NET_RT_IFLIST</code> will return information about a list of interfaces, but if we give it a specific interface (via an interface <em>index number</em>), it will return information about that particular interface.  Thus, the snippet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> mib[<span style="color:#ae81ff">6</span>] <span style="color:#f92672">=</span> { CTL_NET, AF_ROUTE, <span style="color:#ae81ff">0</span>, AF_LINK, NET_RT_IFLIST, <span style="color:#ae81ff">0</span> };
+size_t len <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+mib[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> if_nametoindex(interface);
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>mib[<span style="color:#ae81ff">5</span>]) {
+      <span style="color:#75715e">/* Error */</span>
+}
+<span style="color:#75715e">/* --snip-- */</span>
+</code></pre></div><p>Is actually pretty easy to follow. In the array <code>mib</code>, we specify that we want to:</p>
+<ol>
+<li>Do a network operation (<code>CTL_NET</code>)</li>
+<li>Access the routing table (<code>AF_ROUTE</code>)</li>
+<li>— this is probably reserved for something in the future, idk, but we need to specify it anyway — (<code>0</code>)</li>
+<li>Access the link layer (<code>AF_LINK</code>)</li>
+<li>Get information about interfaces (<code>NET_RT_IFLIST</code>)</li>
+<li>Get information about a particular interface (<code>0</code>)</li>
+</ol>
+<p>You might notice that in the last part of the array, I initialize the value to <code>0</code>. The reason is that we can&rsquo;t just provide the interface as a string name. Instead, we must get the index of the interface, a unique numerical value that identifies an interface. To do this, we use the <code>if_nametoindex()</code> sys-call and set the sixth entry of the array to that index.</p>
+<p>Whew! Now, we just need to make a call to <code>sysctl()</code>&hellip;twice?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">if</span> (sysctl(mib, <span style="color:#ae81ff">6</span>, NULL, <span style="color:#f92672">&amp;</span>len, NULL, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+     <span style="color:#75715e">/* Error */</span>
+}
+
+<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>buf <span style="color:#f92672">=</span> calloc(<span style="color:#ae81ff">1</span>, len);
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>buf) {
+    <span style="color:#75715e">/* Error */</span>
+}
+<span style="color:#66d9ef">if</span> (sysctl(mib, <span style="color:#ae81ff">6</span>, buf, <span style="color:#f92672">&amp;</span>len, NULL, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#75715e">/* Error */</span>
+}
+</code></pre></div><p>OK, so to explain what&rsquo;s happening here, let&rsquo;s consult the manual page (for the third time):</p>
+<blockquote>
+<pre><code>int
+sysctl(int *name, u_int namelen, void *oldp, size_t *oldlenp, void *newp, size_t newlen);
+</code></pre><p>&hellip;</p>
+<p>The information is copied into the buffer specified by oldp.  The size of the buffer is given by the location specified by oldlenp before the call, and that location gives the amount of data copied after a successful call and after a call that returns with the error code ENOMEM.</p>
+<p>If the amount of data available is greater than the size of the buffer supplied, the call supplies as much data as fits in the buffer provided and returns with the error code ENOMEM.  If the old value is not desired, oldp and oldlenp should be set to NULL. The size of the available data can be determined by calling sysctl() with the NULL argument for oldp.  The size of the available data will be returned in the location pointed to by oldlenp. For some operations, the amount of space may change often.  For these operations, the system attempts to round up so that the returned size is large enough for a call to return the data shortly thereafter.</p>
+</blockquote>
+<p>Basically, before the data is copied into <code>oldp</code> the size of the buffer needs to be calculated first. Therefore, we let <code>sysctl()</code> do this for us by giving the operation we want to do with <code>sysctl()</code> (<code>mib</code>), the length of the instructions list, and then provide a pointer to the <code>len</code> variable while setting everything else to <code>NULL </code> and <code>0</code> in the argument list. Once we do that, <code>sysctl()</code> looks at the list of instructions we provided and determines how much space will need to be allocated for the resultant data and then stores that calculated value in <code>len</code>. Thus, we can allocate a region of bytes of size <code>len</code> called <code>buf</code> which, if we pass to <code>sysctl()</code> again, will be filled with the resultant data.</p>
+<p>Now, we need to parse this region of bytes to get the hardware address. The <code>struct if_msghdr</code> is used specifically for storing information about interfaces. Thus, you can simply cast the array of bytes to get the interface information in a readable format. Then, to get the hardware address, we cast the <code>struct if_msghdr</code> to a <code>struct sockaddr_dl</code> so we can directly access the hardware address&hellip;kinda:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> if_msghdr <span style="color:#f92672">*</span>ifm <span style="color:#f92672">=</span> (<span style="color:#66d9ef">struct</span> if_msghdr <span style="color:#f92672">*</span>) buf;
+<span style="color:#66d9ef">struct</span> sockaddr_dl <span style="color:#f92672">*</span>sdl <span style="color:#f92672">=</span> (<span style="color:#66d9ef">struct</span> sockaddr_dl <span style="color:#f92672">*</span>)(ifm <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><p>In the original post I found this in, I couldn&rsquo;t find an explanation for the reason to add <code>1</code> to <code>ifm</code>. It&rsquo;s likely that the 0th index is reserved for some other type of information, though I don&rsquo;t really know at this point. The last step was to take <code>sdl</code> and convert it to a series of bytes representing a hardware address. By using the <code>LLADDR</code> macro, we can obtain the MAC address of the interface as a series of bytes:</p>
+<pre><code>u_char *src = (u_char *) LLADDR(sdl);
+</code></pre><p>To explain what&rsquo;s going on above, let&rsquo;s examine the <code>LLADDR</code> macro:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define LLADDR(s) ((caddr_t)((s)-&gt;sdl_data + (s)-&gt;sdl_nlen))
+</span></code></pre></div><p>OK&hellip;so this doesn&rsquo;t tell us much. To save time, I&rsquo;ll tell you what&rsquo;s going on: in the <code>struct sockaddr_dl</code>, there&rsquo;s a field called <code>sdl_data</code> which contains both the interface name and the link layer address (in that order). Since we don&rsquo;t know how long the interface name is, the structure also has a field named <code>sdl_nlen</code> which contains the length of the interface name. Thus, by advancing <code>sdl_nlen</code> bytes through <code>sdl_data</code>, we obtain a <code>char *</code> with the interface address (this is cast to the type <code>caddr_t</code>, so we need to cast it back to a <code>char *</code> or any other byte-sized type in order to obtain the hardware address).</p>
+<p>So yeah&hellip;that was a lot of hassle to explain a pretty simple operation. It&rsquo;s weird that there&rsquo;s so little documentation there is on this, considering that this is a pretty common low-level network operation.</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://sshawarma.github.io/tags/computer-science/">computer-science</a></span>
+        <span class="tag"><a href="https://sshawarma.github.io/tags/c/">c</a></span>
+        <span class="tag"><a href="https://sshawarma.github.io/tags/networking/">networking</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1568 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2020-11-23 20:33 -0600
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;caption=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;canonicalUrl=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;body=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f&amp;media=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f;description=Getting%20a%20MAC%20Address%20on%20a%20Mac" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f&amp;title=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;summary=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;source=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f&amp;resubmit=true&amp;title=Getting%20a%20MAC%20Address%20on%20a%20Mac" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f;title=Getting%20a%20MAC%20Address%20on%20a%20Mac" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Getting%20a%20MAC%20Address%20on%20a%20Mac%20https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f&amp;t=Getting%20a%20MAC%20Address%20on%20a%20Mac" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Getting%20a%20MAC%20Address%20on%20a%20Mac&amp;url=https%3a%2f%2fsshawarma.github.io%2fposts%2f2020%2f11%2fgetting-a-mac-address-on-a-mac%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+
+          
+            <span class="button next">
+              <a href="https://sshawarma.github.io/posts/2020/11/unfinished-projects/">
+                <span class="button__text">Unfinished Projects</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://sshawarma.github.io">S. Sharma</a></span>
+            
+            
+                <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span><a href="https://sshawarma.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://sshawarma.github.io/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
