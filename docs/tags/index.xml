@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 23 Nov 2020 20:33:28 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 22:03:29 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>personal</title>
+      <link>https://sshawarma.github.io/tags/personal/</link>
+      <pubDate>Tue, 01 Dec 2020 22:03:29 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/personal/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>c</title>
       <link>https://sshawarma.github.io/tags/c/</link>
@@ -32,15 +41,6 @@
       <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://sshawarma.github.io/tags/personal/</link>
-      <pubDate>Sat, 14 Nov 2020 22:06:43 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/personal/</guid>
       <description></description>
     </item>
     
