@@ -6,8 +6,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 01 Dec 2020 22:03:29 -0600</lastBuildDate>
+        <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate>
         <atom:link href="https://sshawarma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Reddit Upvote Predictor Part 1</title>
+            <link>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
+            <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+            
+            <guid>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
+            <description>Hey there.
+I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.
+This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</description>
+            <content type="html"><![CDATA[<p>Hey there.</p>
+<p>I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.</p>
+<p>This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</p>
+<p>I decided, initially, to consider 4 features when determining the number of upvotes a given post will receive:</p>
+<ul>
+<li>OP&rsquo;s Karma</li>
+<li>Time since posted</li>
+<li>Comments on post</li>
+<li>Subreddit the post was posted in</li>
+</ul>
+<p>Intuitively, these features would seem to have some predictive power. However, before I could start implementing a model like this, I decided that I wanted to graph the data. I used the PRAW API in Python to obtain the top 1000 posts in each of the most popular subreddits (as determined by <code>pr.subreddits.popular()</code> where <code>pr</code> is an instance of <code>praw.Reddit</code>). I tried to make it a little faster by using <code>concurrent.futures</code> to send the requests concurrently. Despite my efforts, it still took a little while, but after I got the data, I plotted the data with matplotlib:</p>
+<p><img src="/upvotes-graph.png" alt="4 subplots with karma, time since posted, post comments count, and subreddit graphed against upvotes"></p>
+<p>Clearly, the upvotes on a post appear to be heavily influenced by the time since it was posted (the x-axis is in seconds since the Epoch — January 1st, 1970 00:00) and also by the subreddit it was posted in, with r/memes garnering a heavy number of upvotes (the number of upvotes for each bar is cumulative, i.e, in a given subreddit, all the upvotes received by the 1000 posts examined were added together). It also seems that there is a moderate relationship between the number of comments and the number of upvotes and, surprisingly, a <em>negative</em> relationship between the number of upvotes and karma of the OP.</p>
+<p>After viewing the graph, I&rsquo;m thinking maybe gradient descent with nonlinear feature transformations would be applicable in this scenario and it seems that <a href="https://jermwatt.github.io/machine_learning_refined/notes/10_Nonlinear_intro/10_2_Regression.html">mathematically it&rsquo;s an extension of the same principles</a> used in linear regression. Regardless, gradient descent definitely seems applicable here, and it seems that the features chosen can be used to predict, to a certain extent, the number of upvotes a post will receive.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Quick Update Again</title>

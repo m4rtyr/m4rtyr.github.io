@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine-learning on S. Sharma&#39;s Blog</title>
+    <link>https://sshawarma.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine-learning on S. Sharma&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reddit Upvote Predictor Part 1</title>
+      <link>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
+      <description>Hey there.
+I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.
+This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</description>
+    </item>
+    
+  </channel>
+</rss>

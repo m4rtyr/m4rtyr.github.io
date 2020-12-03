@@ -3,23 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sshawarma.github.io/tags/personal/</loc>
-    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/matplotlib/</loc>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/posts/</loc>
-    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sshawarma.github.io/posts/2020/12/quick-update-again/</loc>
-    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+    <loc>https://sshawarma.github.io/tags/python/</loc>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</loc>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://sshawarma.github.io/</loc>
-    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -34,7 +49,7 @@
   
   <url>
     <loc>https://sshawarma.github.io/tags/</loc>
-    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -48,12 +63,17 @@
   </url>
   
   <url>
-    <loc>https://sshawarma.github.io/tags/c/</loc>
-    <lastmod>2020-11-23T20:33:28-06:00</lastmod>
+    <loc>https://sshawarma.github.io/tags/personal/</loc>
+    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sshawarma.github.io/tags/computer-science/</loc>
+    <loc>https://sshawarma.github.io/posts/2020/12/quick-update-again/</loc>
+    <lastmod>2020-12-01T22:03:29-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sshawarma.github.io/tags/c/</loc>
     <lastmod>2020-11-23T20:33:28-06:00</lastmod>
   </url>
   
@@ -159,11 +179,6 @@
   
   <url>
     <loc>https://sshawarma.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</loc>
-    <lastmod>2020-09-09T20:29:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sshawarma.github.io/tags/python/</loc>
     <lastmod>2020-09-09T20:29:37-05:00</lastmod>
   </url>
   

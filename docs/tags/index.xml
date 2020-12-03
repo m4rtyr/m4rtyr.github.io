@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 22:03:29 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>computer-science</title>
+      <link>https://sshawarma.github.io/tags/computer-science/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://sshawarma.github.io/tags/machine-learning/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matplotlib</title>
+      <link>https://sshawarma.github.io/tags/matplotlib/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://sshawarma.github.io/tags/python/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>personal</title>
       <link>https://sshawarma.github.io/tags/personal/</link>
@@ -23,15 +59,6 @@
       <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computer-science</title>
-      <link>https://sshawarma.github.io/tags/computer-science/</link>
-      <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/computer-science/</guid>
       <description></description>
     </item>
     
@@ -68,33 +95,6 @@
       <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
       
       <guid>https://sshawarma.github.io/tags/d3.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>update</title>
-      <link>https://sshawarma.github.io/tags/update/</link>
-      <pubDate>Sat, 07 Nov 2020 22:01:47 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/update/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://sshawarma.github.io/tags/algorithm/</link>
-      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dynamic-programming</title>
-      <link>https://sshawarma.github.io/tags/dynamic-programming/</link>
-      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/tags/dynamic-programming/</guid>
       <description></description>
     </item>
     
