@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>computer-science on S. Sharma&#39;s Blog</title>
-    <link>https://sshawarma.github.io/tags/computer-science/</link>
+    <link>https://gh0std3v.github.io/tags/computer-science/</link>
     <description>Recent content in computer-science on S. Sharma&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reddit Upvote Predictor Part 1</title>
-      <link>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
+      <link>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
       <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
       <description>Hey there.
 I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.
 This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</description>
@@ -21,10 +21,10 @@ This project is very suitable for machine learning, since the number of upvotes 
     
     <item>
       <title>Getting a MAC Address on a Mac</title>
-      <link>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
       <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
       <description>Hey there.
 Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&amp;rsquo;t as straightforward and I had to do some digging to find an answer.
 On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:</description>
@@ -32,49 +32,49 @@ On Linux, generally I would find the MAC address by doing an ioctl() call with t
     
     <item>
       <title>Learning Rust</title>
-      <link>https://sshawarma.github.io/posts/2020/11/learning-rust/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/learning-rust/</link>
       <pubDate>Wed, 11 Nov 2020 20:47:48 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/learning-rust/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/learning-rust/</guid>
       <description>Hey there.
 I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
     </item>
     
     <item>
       <title>Wikipedia Graph Update</title>
-      <link>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</link>
       <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</guid>
       <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
     </item>
     
     <item>
       <title>Fractional Knapsack</title>
-      <link>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</link>
       <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</guid>
       <description>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&amp;rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.
 Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</description>
     </item>
     
     <item>
       <title>Combining Canvas and D3.js Network Charts</title>
-      <link>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</link>
       <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
       <description>I&amp;rsquo;ve been working on creating a network graph to show the relationship between every single Wikipedia article. I wanted to write this article so I can walk through the problem I&amp;rsquo;m having.
 The Problem Basically, when I tried to render the network chart I decided to go the conventional route and use an SVG (Scalable Vector Graphic). SVGs are awesome for rendering different types of shapes and transitions. For a typical person rendering a few nodes on a network graph, SVGs work well (not to mention that pretty much every tutorial/article on using D3.</description>
     </item>
     
     <item>
       <title>Plotting Reddit Comment Trends With Pandas</title>
-      <link>https://sshawarma.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</link>
+      <link>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</link>
       <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</guid>
       <description>Hey there!
 I wanted to learn more about Pandas, a Python library for data analysis, so I decided to embark on a mini-project to experiment with it. If you use Reddit, you&amp;rsquo;ve probably seen a chain of comments like below:
 Clearly, you can see that there&amp;rsquo;s a pattern in the number of upvotes. Every reply to the parent comment receives less upvotes compared to the previous reply. It would be interesting to create a bar graph, comparing the number of upvotes the parent comment received, the number of upvotes the first reply received, the number of upvotes the second reply received, &amp;hellip;, the number of upvotes the nth reply received.</description>

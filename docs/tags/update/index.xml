@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>update on S. Sharma&#39;s Blog</title>
-    <link>https://sshawarma.github.io/tags/update/</link>
+    <link>https://gh0std3v.github.io/tags/update/</link>
     <description>Recent content in update on S. Sharma&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 07 Nov 2020 22:01:47 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 22:01:47 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Update</title>
-      <link>https://sshawarma.github.io/posts/2020/11/quick-update/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/quick-update/</link>
       <pubDate>Sat, 07 Nov 2020 22:01:47 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/quick-update/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/quick-update/</guid>
       <description>Hey there.
 I don&amp;rsquo;t have much to write about today so I just want to provide a brief overview of my plans for tomorrow:
  Create Canvas-based chart (I decided not to use server-side generated charts)  Add labels/images to nodes Improve Canvas resolution and performance Add drag/pan   Add tests for scrape.py and server.py Add tests and logging output for *.py and client.js  </description>

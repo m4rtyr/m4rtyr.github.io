@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>untagged on S. Sharma&#39;s Blog</title>
-    <link>https://sshawarma.github.io/tags/untagged/</link>
+    <link>https://gh0std3v.github.io/tags/untagged/</link>
     <description>Recent content in untagged on S. Sharma&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 09 Nov 2020 22:06:05 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 22:06:05 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Watson Time Tracker</title>
-      <link>https://sshawarma.github.io/posts/2020/11/watson-time-tracker/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</link>
       <pubDate>Mon, 09 Nov 2020 22:06:05 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/watson-time-tracker/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</guid>
       <description>I was working on my project today and I decided to try out a tool that I&amp;rsquo;ve been interested in using for a long time. Watson is a time management tracker that you can use to track how much time you spend on your projects. Today, according to Watson, I spent 1 hour and 11 minutes working on my project.
 I hope to use it more to track my time and hopefully in the future I can talk about the benefits/cons of using something like Watson.</description>
     </item>
     
     <item>
       <title>Trying Server Side Charts</title>
-      <link>https://sshawarma.github.io/posts/2020/11/trying-server-side-charts/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/trying-server-side-charts/</link>
       <pubDate>Thu, 05 Nov 2020 20:36:18 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/trying-server-side-charts/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/trying-server-side-charts/</guid>
       <description>Hey there.
 This is sort of an update to the article I wrote on trying to use D3.js network charts with canvas. However, after being away from this project for over two weeks and trying out Canvases, I realized a few things:
  Generating graphs with millions of nodes on the client side is horrible. If it were just a few thousand nodes, then it would be ok, but I&amp;rsquo;m generating so many nodes that many clients wouldn&amp;rsquo;t be able to handle it on their machine (regardless of whether we use Canvas or SVG).</description>

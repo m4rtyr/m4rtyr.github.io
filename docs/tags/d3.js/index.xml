@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>d3.js on S. Sharma&#39;s Blog</title>
-    <link>https://sshawarma.github.io/tags/d3.js/</link>
+    <link>https://gh0std3v.github.io/tags/d3.js/</link>
     <description>Recent content in d3.js on S. Sharma&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 08 Nov 2020 21:47:51 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/tags/d3.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 21:47:51 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/d3.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wikipedia Graph Update</title>
-      <link>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</link>
       <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</guid>
       <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
     </item>
     
     <item>
       <title>Combining Canvas and D3.js Network Charts</title>
-      <link>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</link>
       <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
       <description>I&amp;rsquo;ve been working on creating a network graph to show the relationship between every single Wikipedia article. I wanted to write this article so I can walk through the problem I&amp;rsquo;m having.
 The Problem Basically, when I tried to render the network chart I decided to go the conventional route and use an SVG (Scalable Vector Graphic). SVGs are awesome for rendering different types of shapes and transitions. For a typical person rendering a few nodes on a network graph, SVGs work well (not to mention that pretty much every tutorial/article on using D3.</description>
     </item>

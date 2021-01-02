@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S. Sharma&#39;s Blog</title>
-    <link>https://sshawarma.github.io/</link>
+    <link>https://gh0std3v.github.io/</link>
     <description>Recent content on S. Sharma&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Happy New Years</title>
-      <link>https://sshawarma.github.io/posts/2021/01/happy-new-years/</link>
+      <link>https://gh0std3v.github.io/posts/2021/01/happy-new-years/</link>
       <pubDate>Fri, 01 Jan 2021 20:10:49 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2021/01/happy-new-years/</guid>
+      <guid>https://gh0std3v.github.io/posts/2021/01/happy-new-years/</guid>
       <description>Hey there.
 It&amp;rsquo;s been a while since I&amp;rsquo;ve last written. Hopefully I&amp;rsquo;ll be able to write more this year. That&amp;rsquo;s it. Tomorrow, I plan on making a post. Happy new years! :)</description>
     </item>
     
     <item>
       <title>Reddit Upvote Predictor Part 1</title>
-      <link>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
+      <link>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
       <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
       <description>Hey there.
 I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.
 This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</description>
@@ -31,10 +31,10 @@ This project is very suitable for machine learning, since the number of upvotes 
     
     <item>
       <title>Quick Update Again</title>
-      <link>https://sshawarma.github.io/posts/2020/12/quick-update-again/</link>
+      <link>https://gh0std3v.github.io/posts/2020/12/quick-update-again/</link>
       <pubDate>Tue, 01 Dec 2020 22:03:29 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/12/quick-update-again/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/12/quick-update-again/</guid>
       <description>Hey there.
 I haven&amp;rsquo;t been writing recently because I got busy with school/work and felt too tired to write anything. I&amp;rsquo;m hoping that this week I can start writing everyday again.
 :)</description>
@@ -42,10 +42,10 @@ I haven&amp;rsquo;t been writing recently because I got busy with school/work an
     
     <item>
       <title>Getting a MAC Address on a Mac</title>
-      <link>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
       <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
       <description>Hey there.
 Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&amp;rsquo;t as straightforward and I had to do some digging to find an answer.
 On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:</description>
@@ -53,10 +53,10 @@ On Linux, generally I would find the MAC address by doing an ioctl() call with t
     
     <item>
       <title>Unfinished Projects</title>
-      <link>https://sshawarma.github.io/posts/2020/11/unfinished-projects/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/unfinished-projects/</link>
       <pubDate>Sat, 14 Nov 2020 22:06:43 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/unfinished-projects/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/unfinished-projects/</guid>
       <description>Hey there.
 I dropped writing for a little bit just to give myself a break and give myself some time to work on my project. Speaking of projects, this year I&amp;rsquo;ve been trying to cultivate more persistence. I feel like in the past I would start a project, go somewhat far with it, and then fail to follow through and provide something that worked the way I wanted.
 More critically, I didn&amp;rsquo;t feel satisfied.</description>
@@ -64,39 +64,39 @@ More critically, I didn&amp;rsquo;t feel satisfied.</description>
     
     <item>
       <title>Learning Rust</title>
-      <link>https://sshawarma.github.io/posts/2020/11/learning-rust/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/learning-rust/</link>
       <pubDate>Wed, 11 Nov 2020 20:47:48 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/learning-rust/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/learning-rust/</guid>
       <description>Hey there.
 I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
     </item>
     
     <item>
       <title>Watson Time Tracker</title>
-      <link>https://sshawarma.github.io/posts/2020/11/watson-time-tracker/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</link>
       <pubDate>Mon, 09 Nov 2020 22:06:05 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/watson-time-tracker/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</guid>
       <description>I was working on my project today and I decided to try out a tool that I&amp;rsquo;ve been interested in using for a long time. Watson is a time management tracker that you can use to track how much time you spend on your projects. Today, according to Watson, I spent 1 hour and 11 minutes working on my project.
 I hope to use it more to track my time and hopefully in the future I can talk about the benefits/cons of using something like Watson.</description>
     </item>
     
     <item>
       <title>Wikipedia Graph Update</title>
-      <link>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</link>
       <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/wikipedia-graph-update/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</guid>
       <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
     </item>
     
     <item>
       <title>Quick Update</title>
-      <link>https://sshawarma.github.io/posts/2020/11/quick-update/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/quick-update/</link>
       <pubDate>Sat, 07 Nov 2020 22:01:47 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/quick-update/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/quick-update/</guid>
       <description>Hey there.
 I don&amp;rsquo;t have much to write about today so I just want to provide a brief overview of my plans for tomorrow:
  Create Canvas-based chart (I decided not to use server-side generated charts)  Add labels/images to nodes Improve Canvas resolution and performance Add drag/pan   Add tests for scrape.py and server.py Add tests and logging output for *.py and client.js  </description>
@@ -104,10 +104,10 @@ I don&amp;rsquo;t have much to write about today so I just want to provide a bri
     
     <item>
       <title>Fractional Knapsack</title>
-      <link>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</link>
+      <link>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</link>
       <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
       
-      <guid>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</guid>
+      <guid>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</guid>
       <description>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&amp;rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.
 Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</description>
     </item>
