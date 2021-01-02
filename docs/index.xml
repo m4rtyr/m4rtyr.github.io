@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 22:44:50 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate><atom:link href="https://sshawarma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Happy New Years</title>
+      <link>https://sshawarma.github.io/posts/2021/01/happy-new-years/</link>
+      <pubDate>Fri, 01 Jan 2021 20:10:49 -0600</pubDate>
+      
+      <guid>https://sshawarma.github.io/posts/2021/01/happy-new-years/</guid>
+      <description>Hey there.
+It&amp;rsquo;s been a while since I&amp;rsquo;ve last written. Hopefully I&amp;rsquo;ll be able to write more this year.
+That&amp;rsquo;s it. Tomorrow, I plan on making a post.</description>
+    </item>
+    
     <item>
       <title>Reddit Upvote Predictor Part 1</title>
       <link>https://sshawarma.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
@@ -100,17 +111,6 @@ I don&amp;rsquo;t have much to write about today so I just want to provide a bri
       <guid>https://sshawarma.github.io/posts/2020/11/fractional-knapsack/</guid>
       <description>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&amp;rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.
 Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</description>
-    </item>
-    
-    <item>
-      <title>Trying Server Side Charts</title>
-      <link>https://sshawarma.github.io/posts/2020/11/trying-server-side-charts/</link>
-      <pubDate>Thu, 05 Nov 2020 20:36:18 -0600</pubDate>
-      
-      <guid>https://sshawarma.github.io/posts/2020/11/trying-server-side-charts/</guid>
-      <description>Hey there.
-This is sort of an update to the article I wrote on trying to use D3.js network charts with canvas. However, after being away from this project for over two weeks and trying out Canvases, I realized a few things:
- Generating graphs with millions of nodes on the client side is horrible. If it were just a few thousand nodes, then it would be ok, but I&amp;rsquo;m generating so many nodes that many clients wouldn&amp;rsquo;t be able to handle it on their machine (regardless of whether we use Canvas or SVG).</description>
     </item>
     
   </channel>
