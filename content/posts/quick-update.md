@@ -1,7 +1,7 @@
 ---
 title: "Quick Update"
 date: 2020-11-07T22:01:47-06:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
