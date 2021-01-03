@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gh0std3v.github.io/posts/2021/01/happy-new-years/</loc>
-    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+    <loc>https://gh0std3v.github.io/posts/2021/01/an-interesting-fact-about-logarithms/</loc>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gh0std3v.github.io/tags/personal/</loc>
-    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+    <loc>https://gh0std3v.github.io/tags/computer-science/</loc>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gh0std3v.github.io/tags/mathematics/</loc>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://gh0std3v.github.io/posts/</loc>
-    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://gh0std3v.github.io/</loc>
-    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://gh0std3v.github.io/tags/</loc>
-    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+    <lastmod>2021-01-02T18:46:08-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -48,8 +53,13 @@
   </url>
   
   <url>
-    <loc>https://gh0std3v.github.io/tags/computer-science/</loc>
-    <lastmod>2020-12-02T22:44:50-06:00</lastmod>
+    <loc>https://gh0std3v.github.io/posts/2021/01/happy-new-years/</loc>
+    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gh0std3v.github.io/tags/personal/</loc>
+    <lastmod>2021-01-01T20:10:49-06:00</lastmod>
   </url>
   
   <url>

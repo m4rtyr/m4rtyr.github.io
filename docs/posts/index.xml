@@ -6,8 +6,35 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate>
+        <lastBuildDate>Sat, 02 Jan 2021 18:46:08 -0600</lastBuildDate>
         <atom:link href="https://gh0std3v.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>An Interesting Fact About Logarithms</title>
+            <link>https://gh0std3v.github.io/posts/2021/01/an-interesting-fact-about-logarithms/</link>
+            <pubDate>Sat, 02 Jan 2021 18:46:08 -0600</pubDate>
+            
+            <guid>https://gh0std3v.github.io/posts/2021/01/an-interesting-fact-about-logarithms/</guid>
+            <description>Today I learned something interesting about logarithms. Namely, that:
+$$\lg x \approx \ln x + \log x$$
+with less than 1% error!
+The &amp;ldquo;proof&amp;rdquo; behind this is as follows:
+$$\frac{\ln x + \log x}{\lg x} = \frac{\frac{\lg x}{\lg e} + \frac{\lg x}{\lg 10}}{\lg x}$$
+$$= \frac{(\lg e + \lg 10)(\lg x)}{\lg x \lg 10 \lg e}$$
+$$= \frac{1}{\lg e} + \frac{1}{\lg 10}$$
+$$ = \ln 2+ \log 2 $$
+The above is approximately equivalent to $0.</description>
+            <content type="html"><![CDATA[<p>Today I learned something interesting about logarithms. Namely, that:</p>
+<p>$$\lg x \approx \ln x + \log x$$</p>
+<p>with less than 1% error!</p>
+<p>The &ldquo;proof&rdquo; behind this is as follows:</p>
+<p>$$\frac{\ln x + \log x}{\lg x} = \frac{\frac{\lg x}{\lg e} + \frac{\lg x}{\lg 10}}{\lg x}$$</p>
+<p>$$= \frac{(\lg e + \lg 10)(\lg x)}{\lg x \lg 10 \lg e}$$</p>
+<p>$$= \frac{1}{\lg e} + \frac{1}{\lg 10}$$</p>
+<p>$$ = \ln 2+ \log 2 $$</p>
+<p>The above is approximately equivalent to $0.994$, which means that $\lg x \approx \ln x + \log x$ with about $0.006$% error. I&rsquo;m not sure if anyone would ever use this in the modern day for computing logs. Nevertheless, it&rsquo;s pretty interesting.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Happy New Years</title>

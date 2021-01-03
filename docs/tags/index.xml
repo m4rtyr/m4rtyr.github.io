@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jan 2021 18:46:08 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>computer-science</title>
+      <link>https://gh0std3v.github.io/tags/computer-science/</link>
+      <pubDate>Sat, 02 Jan 2021 18:46:08 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mathematics</title>
+      <link>https://gh0std3v.github.io/tags/mathematics/</link>
+      <pubDate>Sat, 02 Jan 2021 18:46:08 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>personal</title>
       <link>https://gh0std3v.github.io/tags/personal/</link>
       <pubDate>Fri, 01 Jan 2021 20:10:49 -0600</pubDate>
       
       <guid>https://gh0std3v.github.io/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computer-science</title>
-      <link>https://gh0std3v.github.io/tags/computer-science/</link>
-      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/tags/computer-science/</guid>
       <description></description>
     </item>
     
@@ -86,15 +95,6 @@
       <pubDate>Mon, 09 Nov 2020 22:06:05 -0600</pubDate>
       
       <guid>https://gh0std3v.github.io/tags/untagged/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>d3.js</title>
-      <link>https://gh0std3v.github.io/tags/d3.js/</link>
-      <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/tags/d3.js/</guid>
       <description></description>
     </item>
     
