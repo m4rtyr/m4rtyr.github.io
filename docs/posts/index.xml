@@ -6,8 +6,22 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 02 Jan 2021 18:46:08 -0600</lastBuildDate>
+        <lastBuildDate>Sun, 03 Jan 2021 22:03:37 -0600</lastBuildDate>
         <atom:link href="https://gh0std3v.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Privating Repos</title>
+            <link>https://gh0std3v.github.io/posts/2021/01/privating-repos/</link>
+            <pubDate>Sun, 03 Jan 2021 22:03:37 -0600</pubDate>
+            
+            <guid>https://gh0std3v.github.io/posts/2021/01/privating-repos/</guid>
+            <description>Recently, I went ahead and private some of my repositories, including repositories of projects that I&amp;rsquo;m currently working on. I just wanted to quickly explain why I&amp;rsquo;m doing this.
+I&amp;rsquo;ve always wanted to hold myself accountable for the projects I do. Sometimes, when I do a project, I can become uninterested in what I&amp;rsquo;m doing or I&amp;rsquo;ll hold off on it due to other responsibilities. As a result, this leaves me with plenty of repositories, some of which are completed projects and others that are not.</description>
+            <content type="html"><![CDATA[<p>Recently, I went ahead and private some of my repositories, including repositories of projects that I&rsquo;m currently working on. I just wanted to quickly explain why I&rsquo;m doing this.</p>
+<p>I&rsquo;ve always wanted to hold myself accountable for the projects I do. Sometimes, when I do a project, I can become uninterested in what I&rsquo;m doing or I&rsquo;ll hold off on it due to other responsibilities. As a result, this leaves me with plenty of repositories, some of which are completed projects and others that are not. Having a bunch of incomplete repositories or &ldquo;toy projects&rdquo; doesn&rsquo;t look good, and it certainly doesn&rsquo;t give me a personal feeling of satisfaction.</p>
+<p>As a result, any future projects I do will likely be private before I release at least one complete version of it (or a version which is working the way I intend for it to work).</p>
+]]></content>
+        </item>
         
         <item>
             <title>An Interesting Fact About Logarithms</title>

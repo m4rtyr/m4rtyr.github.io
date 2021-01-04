@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 02 Jan 2021 18:46:08 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 22:03:37 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>personal</title>
+      <link>https://gh0std3v.github.io/tags/personal/</link>
+      <pubDate>Sun, 03 Jan 2021 22:03:37 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/tags/personal/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>computer-science</title>
       <link>https://gh0std3v.github.io/tags/computer-science/</link>
@@ -23,15 +32,6 @@
       <pubDate>Sat, 02 Jan 2021 18:46:08 -0600</pubDate>
       
       <guid>https://gh0std3v.github.io/tags/mathematics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://gh0std3v.github.io/tags/personal/</link>
-      <pubDate>Fri, 01 Jan 2021 20:10:49 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/tags/personal/</guid>
       <description></description>
     </item>
     

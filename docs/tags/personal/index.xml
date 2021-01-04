@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 20:10:49 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 22:03:37 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privating Repos</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/privating-repos/</link>
+      <pubDate>Sun, 03 Jan 2021 22:03:37 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/privating-repos/</guid>
+      <description>Recently, I went ahead and private some of my repositories, including repositories of projects that I&amp;rsquo;m currently working on. I just wanted to quickly explain why I&amp;rsquo;m doing this.
+I&amp;rsquo;ve always wanted to hold myself accountable for the projects I do. Sometimes, when I do a project, I can become uninterested in what I&amp;rsquo;m doing or I&amp;rsquo;ll hold off on it due to other responsibilities. As a result, this leaves me with plenty of repositories, some of which are completed projects and others that are not.</description>
+    </item>
+    
     <item>
       <title>Happy New Years</title>
       <link>https://gh0std3v.github.io/posts/2021/01/happy-new-years/</link>
