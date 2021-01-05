@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 03 Jan 2021 22:03:37 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 22:33:29 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SocialFinder</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder/</link>
+      <pubDate>Mon, 04 Jan 2021 22:33:29 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder/</guid>
+      <description>As part of the new year, I want to explicitly state the projects I&amp;rsquo;m working on and provide updates on them more frequently. Currently, I&amp;rsquo;m working on a project that I&amp;rsquo;ve dubbed &amp;ldquo;SocialFinder&amp;rdquo;, which is a tool to help find people on the Internet my scraping the Web for social media profiles, news stories, articles, court records, and more.
+Tomorrow, I hope to provide a more detailed description of what the project is, the motivation behind it, and (maybe) provide a deadline of when the first version of the project should be expected to be completed.</description>
+    </item>
+    
     <item>
       <title>Privating Repos</title>
       <link>https://gh0std3v.github.io/posts/2021/01/privating-repos/</link>
@@ -107,15 +117,6 @@ I didn&amp;rsquo;t want to write yesterday because I was working on my project. 
       <guid>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</guid>
       <description>I was working on my project today and I decided to try out a tool that I&amp;rsquo;ve been interested in using for a long time. Watson is a time management tracker that you can use to track how much time you spend on your projects. Today, according to Watson, I spent 1 hour and 11 minutes working on my project.
 I hope to use it more to track my time and hopefully in the future I can talk about the benefits/cons of using something like Watson.</description>
-    </item>
-    
-    <item>
-      <title>Wikipedia Graph Update</title>
-      <link>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</link>
-      <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</guid>
-      <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
     </item>
     
   </channel>
