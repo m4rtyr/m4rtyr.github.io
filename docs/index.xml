@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 04 Jan 2021 22:33:29 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Socialfinder Part 1</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
+      <pubDate>Tue, 05 Jan 2021 20:11:01 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</guid>
+      <description>I wanted to talk more about the project that I mentioned yesterday that I have dubbed &amp;ldquo;SocialFinder&amp;rdquo; (until I can find a better name for it).
+Description SocialFinder is a tool to help find people online. In particular, it&amp;rsquo;s a tool that tries to find documents, images, and other information about or relating to an individual online. In essence, a user would enter data about a particular person (such as a name, address, user account, etc) and the tool would try to find people that match that description by scouring the Web.</description>
+    </item>
+    
     <item>
       <title>SocialFinder</title>
       <link>https://gh0std3v.github.io/posts/2021/01/socialfinder/</link>
@@ -107,16 +117,6 @@ More critically, I didn&amp;rsquo;t feel satisfied.</description>
       <guid>https://gh0std3v.github.io/posts/2020/11/learning-rust/</guid>
       <description>Hey there.
 I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
-    </item>
-    
-    <item>
-      <title>Watson Time Tracker</title>
-      <link>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</link>
-      <pubDate>Mon, 09 Nov 2020 22:06:05 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/posts/2020/11/watson-time-tracker/</guid>
-      <description>I was working on my project today and I decided to try out a tool that I&amp;rsquo;ve been interested in using for a long time. Watson is a time management tracker that you can use to track how much time you spend on your projects. Today, according to Watson, I spent 1 hour and 11 minutes working on my project.
-I hope to use it more to track my time and hopefully in the future I can talk about the benefits/cons of using something like Watson.</description>
     </item>
     
   </channel>

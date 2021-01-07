@@ -6,8 +6,35 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 04 Jan 2021 22:33:29 -0600</lastBuildDate>
+        <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate>
         <atom:link href="https://gh0std3v.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Socialfinder Part 1</title>
+            <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
+            <pubDate>Tue, 05 Jan 2021 20:11:01 -0600</pubDate>
+            
+            <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</guid>
+            <description>I wanted to talk more about the project that I mentioned yesterday that I have dubbed &amp;ldquo;SocialFinder&amp;rdquo; (until I can find a better name for it).
+Description SocialFinder is a tool to help find people online. In particular, it&amp;rsquo;s a tool that tries to find documents, images, and other information about or relating to an individual online. In essence, a user would enter data about a particular person (such as a name, address, user account, etc) and the tool would try to find people that match that description by scouring the Web.</description>
+            <content type="html"><![CDATA[<p>I wanted to talk more about the project that I mentioned yesterday that I have dubbed &ldquo;SocialFinder&rdquo; (until I can find a better name for it).</p>
+<h2 id="description">Description</h2>
+<p>SocialFinder is a tool to help find people online. In particular, it&rsquo;s a tool that tries to find documents, images, and other information about or relating to an individual online. In essence, a user would enter data about a particular person (such as a name, address, user account, etc) and the tool would try to find people that match that description by scouring the Web. As it finds people who match the description, it tries to determine <em>to what extent</em> each of the person in its match list matches the description given. For example, if the user is trying to find someone named John Doe who has a user account on Facebook and is 46 years old and lives in the Bay Area, it will find a list of people who match that description, and then determine who fits the description &ldquo;more exactly.&rdquo; For example, there may be a person named John Doe who is 46, but he doesn&rsquo;t live in the Bay Area. Or maybe there is a person who fits that description exactly except for the fact that they use Facebook. It&rsquo;s also possible that multiple people fit this description exactly, but only one &ldquo;strongly&rdquo; indicates that they are 46, live in the Bay Area, have a Facebook account, and are named John Doe because this person has multiple pictures of themselves online and a blog where their age and general location are re-stated.</p>
+<p>Admittedly, it&rsquo;s a difficult problem to solve, since multiple people can match a description online to a T. However, the idea that we must <em>confirm</em> or <em>reinforce</em> the idea that a person online is, in fact, that person allows us to be more confident that an individual we find online is the individual we are looking for.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Finding out who a person is online is applicable in many domains. From <a href="https://www.maltego.com/">intelligence gathering</a> to <a href="https://www.netflix.com/title/81031373">tracking down Internet serial killers</a>, finding the identity of a person online and confirming that a person online is, in fact, who they say they are is critical. I shouldn&rsquo;t have to expound on how private Internet companies are extracting sensitive user data for shady purposes and that government entities also engage in similar, more-illicit behavior as well. The fact of the matter is that as more people connect to the Internet and the more content is uploaded, the more interest there is in identifying who these people are.</p>
+<p>Of course, that isn&rsquo;t to say that people shouldn&rsquo;t have a <a href="https://www.eff.org/issues/privacy">right to privacy</a>. If someone doesn&rsquo;t want information about themselves to be shared online, then that should be respected. However, the conversation about Internet privacy is only starting. Tools like SocialFinder, if successfully executed, could provide more light on these issues. Thus, this project is not meant to violate the privacy of individuals more than it is to provide a simple way to obtain already-public information about them.</p>
+<h2 id="brief-outline">Brief Outline</h2>
+<p>While the project is still evolving, it&rsquo;s worth detailing its current status. As of right now, a version 0.1.0 is being developed. There are three main sections of the project that need to be completed (these sections compose the logic of the program):</p>
+<ul>
+<li><strong>Representations and Entities</strong> — Entities refer to abstractions of items on the Internet (such as domains, URLs, and documents) whereas representations refer to how input data about a particular individual is represented in the program&rsquo;s logic. Entities help us to verify that (1) a representation of a person exists and (2) extract information about this person. In order for (2) to occur, the entity must be cross-checked with other entities and the representation itself so that the program can be sure that, indeed, an entity is describing or related to the person provided by the representation.</li>
+<li><strong>Scraping Engine</strong> — The scraping engine performs the actual work of fetching entities. The scraper looks at particular pages on the web and attempts to find as much information as possible. Any non-relevant information is handled by a crosscheck engine.</li>
+<li><strong>Crosscheck Engine</strong> — The crosscheck engine checks that any new entities discovered actually do match the representation provided and match other entities already verified to match the representation. The term &ldquo;match&rdquo; is not necessarily a check for a direct-to-direct correspondence. Rather, it&rsquo;s a process by which we check that two entities do not contradict each other in the information they provided.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This project is a work-in-progress, and the first version is not even out. Many details in the outline are subject to change. Hopefully, I&rsquo;ll be able to provide more updates soon.</p>
+]]></content>
+        </item>
         
         <item>
             <title>SocialFinder</title>
