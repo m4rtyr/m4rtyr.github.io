@@ -7,7 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 21:22:53 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributive Property of Modulus</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</link>
+      <pubDate>Fri, 08 Jan 2021 21:22:53 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</guid>
+      <description>Hey there.
+Since I don&amp;rsquo;t have much time today, I wanted to write an article on something small. Today, I proved the distributive property of the modulus ($\mod{}$):
+$$z(x \mod y) = (zx) \mod (zy)$$
+Proving this is pretty simple:
+$$z(x \mod y) = z(x - y\lfloor\frac{x}{y}\rfloor)$$
+$$= zx - zy\lfloor\frac{x}{y}\rfloor$$
+$$= zx - zy\lfloor\frac{zx}{zy}\rfloor$$
+$$= (zx) \mod (zy)$$
+It&amp;rsquo;s a pretty nice property, and is especially useful for proving a very important property:</description>
+    </item>
+    
     <item>
       <title>Socialfinder Part 1</title>
       <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
@@ -104,17 +121,6 @@ Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choos
       <guid>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
       <description>I&amp;rsquo;ve been working on creating a network graph to show the relationship between every single Wikipedia article. I wanted to write this article so I can walk through the problem I&amp;rsquo;m having.
 The Problem Basically, when I tried to render the network chart I decided to go the conventional route and use an SVG (Scalable Vector Graphic). SVGs are awesome for rendering different types of shapes and transitions. For a typical person rendering a few nodes on a network graph, SVGs work well (not to mention that pretty much every tutorial/article on using D3.</description>
-    </item>
-    
-    <item>
-      <title>Plotting Reddit Comment Trends With Pandas</title>
-      <link>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</link>
-      <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
-      
-      <guid>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</guid>
-      <description>Hey there!
-I wanted to learn more about Pandas, a Python library for data analysis, so I decided to embark on a mini-project to experiment with it. If you use Reddit, you&amp;rsquo;ve probably seen a chain of comments like below:
-Clearly, you can see that there&amp;rsquo;s a pattern in the number of upvotes. Every reply to the parent comment receives less upvotes compared to the previous reply. It would be interesting to create a bar graph, comparing the number of upvotes the parent comment received, the number of upvotes the first reply received, the number of upvotes the second reply received, &amp;hellip;, the number of upvotes the nth reply received.</description>
     </item>
     
   </channel>

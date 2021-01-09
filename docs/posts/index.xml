@@ -6,8 +6,41 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate>
+        <lastBuildDate>Fri, 08 Jan 2021 21:22:53 -0600</lastBuildDate>
         <atom:link href="https://gh0std3v.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Distributive Property of Modulus</title>
+            <link>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</link>
+            <pubDate>Fri, 08 Jan 2021 21:22:53 -0600</pubDate>
+            
+            <guid>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</guid>
+            <description>Hey there.
+Since I don&amp;rsquo;t have much time today, I wanted to write an article on something small. Today, I proved the distributive property of the modulus ($\mod{}$):
+$$z(x \mod y) = (zx) \mod (zy)$$
+Proving this is pretty simple:
+$$z(x \mod y) = z(x - y\lfloor\frac{x}{y}\rfloor)$$
+$$= zx - zy\lfloor\frac{x}{y}\rfloor$$
+$$= zx - zy\lfloor\frac{zx}{zy}\rfloor$$
+$$= (zx) \mod (zy)$$
+It&amp;rsquo;s a pretty nice property, and is especially useful for proving a very important property:</description>
+            <content type="html"><![CDATA[<p>Hey there.</p>
+<p>Since I don&rsquo;t have much time today, I wanted to write an article on something small. Today, I proved the distributive property of the modulus ($\mod{}$):</p>
+<p>$$z(x \mod y) = (zx) \mod (zy)$$</p>
+<p>Proving this is pretty simple:</p>
+<p>$$z(x \mod y) = z(x - y\lfloor\frac{x}{y}\rfloor)$$</p>
+<p>$$= zx - zy\lfloor\frac{x}{y}\rfloor$$</p>
+<p>$$= zx - zy\lfloor\frac{zx}{zy}\rfloor$$</p>
+<p>$$= (zx) \mod (zy)$$</p>
+<p>It&rsquo;s a pretty nice property, and is especially useful for proving a very important property:</p>
+<p>$$a \equiv b (\mod m) \iff an \equiv bn (\mod mn), \text{when}\space n \ne 0$$</p>
+<p>This is proven with the distributive property as follows:</p>
+<p>$$a \mod m = b \mod m$$</p>
+<p>$$n(a \mod m) = n(b \mod m)$$</p>
+<p>$$an \mod mn = bn \mod mn$$</p>
+<p>$$an \equiv bn (\mod mn)$$</p>
+]]></content>
+        </item>
         
         <item>
             <title>Socialfinder Part 1</title>

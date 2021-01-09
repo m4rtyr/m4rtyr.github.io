@@ -7,7 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 21:22:53 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributive Property of Modulus</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</link>
+      <pubDate>Fri, 08 Jan 2021 21:22:53 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</guid>
+      <description>Hey there.
+Since I don&amp;rsquo;t have much time today, I wanted to write an article on something small. Today, I proved the distributive property of the modulus ($\mod{}$):
+$$z(x \mod y) = (zx) \mod (zy)$$
+Proving this is pretty simple:
+$$z(x \mod y) = z(x - y\lfloor\frac{x}{y}\rfloor)$$
+$$= zx - zy\lfloor\frac{x}{y}\rfloor$$
+$$= zx - zy\lfloor\frac{zx}{zy}\rfloor$$
+$$= (zx) \mod (zy)$$
+It&amp;rsquo;s a pretty nice property, and is especially useful for proving a very important property:</description>
+    </item>
+    
     <item>
       <title>Socialfinder Part 1</title>
       <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
@@ -107,16 +124,6 @@ On Linux, generally I would find the MAC address by doing an ioctl() call with t
       <description>Hey there.
 I dropped writing for a little bit just to give myself a break and give myself some time to work on my project. Speaking of projects, this year I&amp;rsquo;ve been trying to cultivate more persistence. I feel like in the past I would start a project, go somewhat far with it, and then fail to follow through and provide something that worked the way I wanted.
 More critically, I didn&amp;rsquo;t feel satisfied.</description>
-    </item>
-    
-    <item>
-      <title>Learning Rust</title>
-      <link>https://gh0std3v.github.io/posts/2020/11/learning-rust/</link>
-      <pubDate>Wed, 11 Nov 2020 20:47:48 -0600</pubDate>
-      
-      <guid>https://gh0std3v.github.io/posts/2020/11/learning-rust/</guid>
-      <description>Hey there.
-I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
     </item>
     
   </channel>
