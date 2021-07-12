@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on S. Sharma&#39;s Blog</title>
+    <link>https://gh0std3v.github.io/tags/programming/</link>
+    <description>Recent content in programming on S. Sharma&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 05 Jan 2021 20:11:01 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Socialfinder Part 1</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
+      <pubDate>Tue, 05 Jan 2021 20:11:01 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</guid>
+      <description>I wanted to talk more about the project that I mentioned yesterday that I have dubbed &amp;ldquo;SocialFinder&amp;rdquo; (until I can find a better name for it).
+Description SocialFinder is a tool to help find people online. In particular, it&amp;rsquo;s a tool that tries to find documents, images, and other information about or relating to an individual online. In essence, a user would enter data about a particular person (such as a name, address, user account, etc) and the tool would try to find people that match that description by scouring the Web.</description>
+    </item>
+    
+    <item>
+      <title>SocialFinder</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder/</link>
+      <pubDate>Mon, 04 Jan 2021 22:33:29 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder/</guid>
+      <description>As part of the new year, I want to explicitly state the projects I&amp;rsquo;m working on and provide updates on them more frequently. Currently, I&amp;rsquo;m working on a project that I&amp;rsquo;ve dubbed &amp;ldquo;SocialFinder&amp;rdquo;, which is a tool to help find people on the Internet my scraping the Web for social media profiles, news stories, articles, court records, and more.
+Tomorrow, I hope to provide a more detailed description of what the project is, the motivation behind it, and (maybe) provide a deadline of when the first version of the project should be expected to be completed.</description>
+    </item>
+    
+  </channel>
+</rss>

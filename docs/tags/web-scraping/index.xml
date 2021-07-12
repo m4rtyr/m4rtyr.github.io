@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web-scraping on S. Sharma&#39;s Blog</title>
+    <link>https://gh0std3v.github.io/tags/web-scraping/</link>
+    <description>Recent content in web-scraping on S. Sharma&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 09 Sep 2020 20:29:37 -0500</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plotting Reddit Comment Trends With Pandas</title>
+      <link>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</link>
+      <pubDate>Wed, 09 Sep 2020 20:29:37 -0500</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/09/plotting-reddit-comment-trends-with-pandas/</guid>
+      <description>Hey there!
+I wanted to learn more about Pandas, a Python library for data analysis, so I decided to embark on a mini-project to experiment with it. If you use Reddit, you&amp;rsquo;ve probably seen a chain of comments like below:
+Clearly, you can see that there&amp;rsquo;s a pattern in the number of upvotes. Every reply to the parent comment receives less upvotes compared to the previous reply. It would be interesting to create a bar graph, comparing the number of upvotes the parent comment received, the number of upvotes the first reply received, the number of upvotes the second reply received, &amp;hellip;, the number of upvotes the nth reply received.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computer-science on S. Sharma&#39;s Blog</title>
+    <link>https://gh0std3v.github.io/tags/computer-science/</link>
+    <description>Recent content in computer-science on S. Sharma&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 08 Jan 2021 21:22:53 -0600</lastBuildDate><atom:link href="https://gh0std3v.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributive Property of Modulus</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</link>
+      <pubDate>Fri, 08 Jan 2021 21:22:53 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/distributive-property-of-modulus/</guid>
+      <description>Hey there.
+Since I don&amp;rsquo;t have much time today, I wanted to write an article on something small. Today, I proved the distributive property of the modulus ($\mod{}$):
+$$z(x \mod y) = (zx) \mod (zy)$$
+Proving this is pretty simple:
+$$z(x \mod y) = z(x - y\lfloor\frac{x}{y}\rfloor)$$
+$$= zx - zy\lfloor\frac{x}{y}\rfloor$$
+$$= zx - zy\lfloor\frac{zx}{zy}\rfloor$$
+$$= (zx) \mod (zy)$$
+It&amp;rsquo;s a pretty nice property, and is especially useful for proving a very important property:</description>
+    </item>
+    
+    <item>
+      <title>Socialfinder Part 1</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</link>
+      <pubDate>Tue, 05 Jan 2021 20:11:01 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder-part-1/</guid>
+      <description>I wanted to talk more about the project that I mentioned yesterday that I have dubbed &amp;ldquo;SocialFinder&amp;rdquo; (until I can find a better name for it).
+Description SocialFinder is a tool to help find people online. In particular, it&amp;rsquo;s a tool that tries to find documents, images, and other information about or relating to an individual online. In essence, a user would enter data about a particular person (such as a name, address, user account, etc) and the tool would try to find people that match that description by scouring the Web.</description>
+    </item>
+    
+    <item>
+      <title>SocialFinder</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/socialfinder/</link>
+      <pubDate>Mon, 04 Jan 2021 22:33:29 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/socialfinder/</guid>
+      <description>As part of the new year, I want to explicitly state the projects I&amp;rsquo;m working on and provide updates on them more frequently. Currently, I&amp;rsquo;m working on a project that I&amp;rsquo;ve dubbed &amp;ldquo;SocialFinder&amp;rdquo;, which is a tool to help find people on the Internet my scraping the Web for social media profiles, news stories, articles, court records, and more.
+Tomorrow, I hope to provide a more detailed description of what the project is, the motivation behind it, and (maybe) provide a deadline of when the first version of the project should be expected to be completed.</description>
+    </item>
+    
+    <item>
+      <title>An Interesting Fact About Logarithms</title>
+      <link>https://gh0std3v.github.io/posts/2021/01/an-interesting-fact-about-logarithms/</link>
+      <pubDate>Sat, 02 Jan 2021 18:46:08 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2021/01/an-interesting-fact-about-logarithms/</guid>
+      <description>Today I learned something interesting about logarithms. Namely, that:
+$$\lg x \approx \ln x + \log x$$
+with less than 1% error!
+The &amp;ldquo;proof&amp;rdquo; behind this is as follows:
+$$\frac{\ln x + \log x}{\lg x} = \frac{\frac{\lg x}{\lg e} + \frac{\lg x}{\lg 10}}{\lg x}$$
+$$= \frac{(\lg e + \lg 10)(\lg x)}{\lg x \lg 10 \lg e}$$
+$$= \frac{1}{\lg e} + \frac{1}{\lg 10}$$
+$$ = \ln 2+ \log 2 $$
+The above is approximately equivalent to $0.</description>
+    </item>
+    
+    <item>
+      <title>Reddit Upvote Predictor Part 1</title>
+      <link>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</link>
+      <pubDate>Wed, 02 Dec 2020 22:44:50 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/12/reddit-upvote-predictor-part-1/</guid>
+      <description>Hey there.
+I wanted to start working more with Tensorflow, so I decided to do a simple project where I try to predict the number of upvotes a given Reddit post will receive in a certain amount of time.
+This project is very suitable for machine learning, since the number of upvotes $y$ that a post gets can be predicted using a linear equation, of the form $\sum_{i=1}^n w_ix_i+b_i$ where $w_i$ and $b_i$ can be calculated through a method such as gradient descent and $x_i$ is the feature in particular.</description>
+    </item>
+    
+    <item>
+      <title>Getting a MAC Address on a Mac</title>
+      <link>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</link>
+      <pubDate>Mon, 23 Nov 2020 20:33:28 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/11/getting-a-mac-address-on-a-mac/</guid>
+      <description>Hey there.
+Recently, I needed to write some code in C to get the MAC address of a particular interface. On Linux, this is pretty easy to do. However, on BSD systems and, more importantly, on macOS, it wasn&amp;rsquo;t as straightforward and I had to do some digging to find an answer.
+On Linux, generally I would find the MAC address by doing an ioctl() call with the argument SIOCGIFHWADDR like so:</description>
+    </item>
+    
+    <item>
+      <title>Learning Rust</title>
+      <link>https://gh0std3v.github.io/posts/2020/11/learning-rust/</link>
+      <pubDate>Wed, 11 Nov 2020 20:47:48 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/11/learning-rust/</guid>
+      <description>Hey there.
+I didn&amp;rsquo;t want to write yesterday because I was working on my project. In other news, I decided to learn a little bit of Rust through the Official Rust Book since I used to play around with the C programming language. So far, I&amp;rsquo;ve found Rust to be an interesting language that remedies some of the problems with &amp;ldquo;unsafe&amp;rdquo; languages like C while still attempting to give access to the low level.</description>
+    </item>
+    
+    <item>
+      <title>Wikipedia Graph Update</title>
+      <link>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</link>
+      <pubDate>Sun, 08 Nov 2020 21:47:51 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/11/wikipedia-graph-update/</guid>
+      <description>I wanted to give a quick update on the project that I&amp;rsquo;ve been working on. Today, I managed to render the nodes and links on the canvas and I think I also have a better understanding of D3.js than before. Of course, I think some optimizations can be made and it can be made more graphically appealing (labels on the nodes and drag/pan/zoom are two features that I definitely want to implement soon).</description>
+    </item>
+    
+    <item>
+      <title>Fractional Knapsack</title>
+      <link>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</link>
+      <pubDate>Fri, 06 Nov 2020 20:17:22 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/11/fractional-knapsack/</guid>
+      <description>I wanted to explain the fractional knapsack algorithm since I recently solved a programming problem with it. However, I don&amp;rsquo;t want to try and explain the algorithm by just listing out the steps. Instead, I want to provide an intuitive description of the algorithm whereby I explain each step as we try to solve the problem.
+Problem Given $n$ items each of which have a weight $w_k$ and price $p_k$, choose the items (not necessarily all) such that you choose the minimal price and the weight of the items is $\le W$.</description>
+    </item>
+    
+    <item>
+      <title>Combining Canvas and D3.js Network Charts</title>
+      <link>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</link>
+      <pubDate>Tue, 03 Nov 2020 18:10:06 -0600</pubDate>
+      
+      <guid>https://gh0std3v.github.io/posts/2020/11/combining-canvas-and-d3.js-network-charts/</guid>
+      <description>I&amp;rsquo;ve been working on creating a network graph to show the relationship between every single Wikipedia article. I wanted to write this article so I can walk through the problem I&amp;rsquo;m having.
+The Problem Basically, when I tried to render the network chart I decided to go the conventional route and use an SVG (Scalable Vector Graphic). SVGs are awesome for rendering different types of shapes and transitions. For a typical person rendering a few nodes on a network graph, SVGs work well (not to mention that pretty much every tutorial/article on using D3.</description>
+    </item>
+    
+  </channel>
+</rss>
